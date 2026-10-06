@@ -1,0 +1,90 @@
+
+
+local function blood(self, value)
+	if value >= 90 then
+		return "10"
+	elseif value >= 80 then
+		return "9"
+	elseif value >= 70 then
+		return "8"
+	elseif value >= 60 then
+		return "7"
+	elseif value >= 50 then
+		return "6"
+	elseif value >= 40 then
+		return "5"
+	elseif value >= 30 then
+		return "4"
+	elseif value >= 20 then
+		return "3"
+	elseif value >= 10 then
+		return "2"
+	elseif value >= 0 then
+		return "1"
+	end
+end
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	self.blood = 100
+
+	self.speed = 100
+
+	self.dir = vmath.vector3()
+	self.correction = vmath.vector3()
+	self.pp = vmath.vector3()
+
+	print(blood(self, self.blood))
+
+	sprite.play_flipbook("#sprite", blood(self, self.blood))
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	self.correction = vmath.vector3()
+
+	-- normiert den Bewegungsvektor
+	if vmath.length(self.dir) > 1 then
+		self.dir = vmath.normalize(self.dir)
+	end
+	--Updated Spieler Position
+	local p = go.get_position()
+	local new_p = p + self.dir * self.speed * dt
+	go.set_position(new_p)
+
+	self.dir = vmath.vector3()
+
+	self.blood = self.blood - dt
+	sprite.play_flipbook("#sprite", blood(self, self.blood))
+end
+
+function on_message(self, message_id, message, sender)
+	-- Add message-handling code here
+	-- Learn more: https://defold.com/manuals/message-passing/
+	-- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+	
+	-- Bewegung, Figur läuft per Tastatur in Richtungen
+	if action_id == hash("up") then
+		self.dir.y = 1
+	elseif action_id == hash("down") then
+		self.dir.y = -1
+	elseif action_id == hash("left") then
+		self.dir.x = -1
+	elseif action_id == hash("right") then
+		self.dir.x = 1
+	end
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Learn more: https://defold.com/manuals/hot-reload/
+	-- Remove this function if not needed
+end

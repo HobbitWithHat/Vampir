@@ -1,4 +1,12 @@
 name: "main"
+instances {
+  id: "vampire"
+  prototype: "/player/vampire.go"
+  position {
+    x: 453.22168
+    y: 209.48993
+  }
+}
 scale_along_z: 0
 embedded_instances {
   id: "go"
