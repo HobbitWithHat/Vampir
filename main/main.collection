@@ -3,8 +3,9 @@ instances {
   id: "vampire"
   prototype: "/player/vampire.go"
   position {
-    x: 453.22168
-    y: 209.48993
+    x: -2.77832
+    y: -1.510071
+    z: 0.1
   }
 }
 scale_along_z: 0
@@ -22,17 +23,17 @@ embedded_instances {
   "\"\n"
   "}\n"
   ""
-  position {
-    x: 640.0
-    y: 360.0
-  }
 }
 embedded_instances {
   id: "game"
-  data: "embedded_components {\n"
+  data: "components {\n"
+  "  id: \"main\"\n"
+  "  component: \"/main/main.script\"\n"
+  "}\n"
+  "embedded_components {\n"
   "  id: \"cafe\"\n"
   "  type: \"collectionfactory\"\n"
-  "  data: \"prototype: \\\"\\\"\\n"
+  "  data: \"prototype: \\\"/collections/cafe.collection\\\"\\n"
   "\"\n"
   "}\n"
   ""
@@ -44,4 +45,8 @@ embedded_instances {
   "  component: \"/hud/hud.gui\"\n"
   "}\n"
   ""
+  position {
+    x: -640.0
+    y: -360.0
+  }
 }
