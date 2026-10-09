@@ -1,3 +1,4 @@
+script: "/hud/hud.gui_script"
 fonts {
   name: "always_on_top"
   font: "/builtins/fonts/debug/always_on_top.font"
@@ -12,7 +13,7 @@ nodes {
     y: 111.0
   }
   type: TYPE_BOX
-  id: "background"
+  id: "textbox_background"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
@@ -22,8 +23,8 @@ nodes {
     y: 100.0
   }
   type: TYPE_BOX
-  id: "border"
-  parent: "background"
+  id: "textbox_border"
+  parent: "textbox_background"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
@@ -40,9 +41,9 @@ nodes {
   type: TYPE_TEXT
   text: "Test Test"
   font: "always_on_top"
-  id: "text"
+  id: "textbox_text"
   line_break: true
-  parent: "background"
+  parent: "textbox_background"
   inherit_alpha: true
 }
 material: "/builtins/materials/gui.material"

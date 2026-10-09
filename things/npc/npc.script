@@ -2,7 +2,6 @@ go.property("character", hash("stranger"))
 local npc = require("things.npc.characters")
 
 function init(self)
-	self.dia = 1
 	self.int = 1
 	print(npc[self.character]["item"])
 end
@@ -11,9 +10,17 @@ end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("interact") then
 		if message.stuff[npc[self.character]["item"]] == true then
-			print("Has Item")
+			local dialog = "B"
 		else
-			print("Still needs item")
+			local dialog = "A"
+		end
+		
+		if npc[self.character][dialog][self.int] then
+			msg.post("/hud#hud", "show_text", {text = npc[self.character][dialog][self.int]})
+			self.int = self.int+1
+		else
+			msg.post("/hud#hud", "hide_text")
+			self.int = 1
 		end
 	end
 end
