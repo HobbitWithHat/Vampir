@@ -30,7 +30,7 @@ embedded_instances {
 embedded_instances {
   id: "game"
   data: "embedded_components {\n"
-  "  id: \"menu\"\n"
+  "  id: \"cafe\"\n"
   "  type: \"collectionfactory\"\n"
   "  data: \"prototype: \\\"\\\"\\n"
   "\"\n"
