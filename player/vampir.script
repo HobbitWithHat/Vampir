@@ -29,7 +29,7 @@ function init(self)
 	self.blood = 100
 	self.object = nil
 
-	self.speed = 75
+	self.speed = 60
 
 	self.dir = vmath.vector3()
 	self.correction = vmath.vector3()
@@ -88,12 +88,18 @@ function on_message(self, message_id, message, sender)
 				self.correction = self.correction + comp
 			end
 		end
+
+		-- detecting collided object and remembers it
+		-- important for interacting with the last collided object
 	elseif message_id == hash("trigger_response") then
 		if message.enter then
 			self.object = message.other_id
 		else
 			self.object = nil
 		end	
+
+	elseif message_id == hash("collect") then
+		self.stuff[message.item] = true
 	end
 end
 
@@ -110,7 +116,6 @@ function on_input(self, action_id, action)
 		self.dir.x = 1
 		
 	elseif action_id == hash("interact") and action.pressed and self.object then
-		print("interact with ", self.object)
 		msg.post(self.object, "interact", { stuff = self.stuff })
 	end
 end

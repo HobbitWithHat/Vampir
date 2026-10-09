@@ -1,3 +1,13 @@
 function init(self)
-	collectionfactory.create("/game#cafe")
+	self.current = collectionfactory.create("/game#cafe")
+	print(self.current)
 end
+
+
+
+function on_message()
+	
+	
+	
+end
+

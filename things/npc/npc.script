@@ -3,24 +3,29 @@ local npc = require("things.npc.characters")
 
 function init(self)
 	self.int = 1
-	print(npc[self.character]["item"])
+	self.dialog = nil
+	print("need: " .. npc[self.character]["item"])
 end
 
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("interact") then
 		if message.stuff[npc[self.character]["item"]] == true then
-			local dialog = "B"
+			self.dialog = "B"
+			if message.stuff[npc[self.character]["give"]] == false then
+				msg.post(sender, "collect", { item = npc[self.character]["give"] })
+			end
 		else
-			local dialog = "A"
+			self.dialog = "A"
 		end
 		
-		if npc[self.character][dialog][self.int] then
-			msg.post("/hud#hud", "show_text", {text = npc[self.character][dialog][self.int]})
+		if npc[self.character][self.dialog][self.int] then
+			msg.post("/hud#hud", "show_text", {text = npc[self.character][self.dialog][self.int]})
 			self.int = self.int+1
 		else
 			msg.post("/hud#hud", "hide_text")
 			self.int = 1
+			self.dialog = nil
 		end
 	end
 end

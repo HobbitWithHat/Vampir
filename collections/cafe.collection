@@ -1,10 +1,10 @@
 name: "cafe"
 instances {
-  id: "npc"
+  id: "friend"
   prototype: "/things/npc/npc.go"
   position {
-    x: 114.02565
-    y: 9.473751
+    x: 151.02565
+    y: -33.52625
     z: 0.1
   }
 }
@@ -29,4 +29,62 @@ embedded_instances {
   "\"\n"
   "}\n"
   ""
+}
+embedded_instances {
+  id: "barmaid"
+  data: "components {\n"
+  "  id: \"npc\"\n"
+  "  component: \"/things/npc/npc.script\"\n"
+  "  properties {\n"
+  "    id: \"character\"\n"
+  "    value: \"cafe\"\n"
+  "    type: PROPERTY_TYPE_HASH\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"trigger\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"type: COLLISION_OBJECT_TYPE_TRIGGER\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"interact\\\"\\n"
+  "mask: \\\"player\\\"\\n"
+  "embedded_collision_shape {\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 11.0\\n"
+  "      y: -17.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "    }\\n"
+  "    index: 0\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  data: 30.0\\n"
+  "  data: 30.0\\n"
+  "  data: 10.0\\n"
+  "}\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"default_animation: \\\"10\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "textures {\\n"
+  "  sampler: \\\"texture_sampler\\\"\\n"
+  "  texture: \\\"/graphics/npc.tilesource\\\"\\n"
+  "}\\n"
+  "\"\n"
+  "  position {\n"
+  "    z: 0.1\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 56.0
+    y: 53.0
+  }
 }

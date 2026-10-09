@@ -30,7 +30,7 @@ nodes {
 }
 nodes {
   size {
-    x: 200.0
+    x: 650.0
     y: 100.0
   }
   color {
