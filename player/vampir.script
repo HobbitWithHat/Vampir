@@ -35,19 +35,21 @@ function init(self)
 	self.correction = vmath.vector3()
 	self.pp = vmath.vector3()
 
-	print(blood(self, self.blood))
 
 	sprite.play_flipbook("#sprite", blood(self, self.blood))
 
 	-- sammelbare Items und Stats
-	self.info = false
-	self.coffee = false
-	self.cologne = false
-	self.key = false
-	self.number = false 
-	self.juice = false 
-	self.doll = false 
-	self.tantrum = false 
+	self.stuff = {
+		info = false,
+		coffee = false,
+		cologne = false,
+		key = false,
+		number = false,
+		juice = false,
+		doll = false,
+		tantrum = false,
+	}
+
 	
 end
 
@@ -115,7 +117,7 @@ function on_input(self, action_id, action)
 		
 	elseif action_id == hash("interact") and action.pressed and self.object then
 		print("interact with ", self.object)
-		msg.post(self.object, "interact")
+		msg.post(self.object, "interact", { stuff = self.stuff })
 	end
 end
 

@@ -3,8 +3,6 @@ instances {
   id: "vampire"
   prototype: "/player/vampire.go"
   position {
-    x: -2.77832
-    y: -1.510071
     z: 0.1
   }
 }
@@ -19,6 +17,7 @@ embedded_instances {
   "near_z: -1.0\\n"
   "far_z: 1.0\\n"
   "orthographic_projection: 1\\n"
+  "orthographic_zoom: 2.0\\n"
   "orthographic_mode: ORTHO_MODE_AUTO_COVER\\n"
   "\"\n"
   "}\n"
