@@ -5,8 +5,12 @@ end
 
 
 
-function on_message()
-	
+function on_message(self, message_id, message, sender)
+	if message_id == hash("transition") then
+
+a
+		
+	end
 	
 	
 end

@@ -1051,26 +1051,6 @@ layers {
     tile: 1447
   }
   cell {
-    x: 16
-    y: -1
-    tile: 1165
-  }
-  cell {
-    x: 17
-    y: -1
-    tile: 1167
-  }
-  cell {
-    x: 16
-    y: 0
-    tile: 1069
-  }
-  cell {
-    x: 17
-    y: 0
-    tile: 1071
-  }
-  cell {
     x: 9
     y: 2
     tile: 1165
@@ -1086,21 +1066,6 @@ layers {
     tile: 1167
   }
   cell {
-    x: 16
-    y: 2
-    tile: 1165
-  }
-  cell {
-    x: 17
-    y: 2
-    tile: 1166
-  }
-  cell {
-    x: 18
-    y: 2
-    tile: 1167
-  }
-  cell {
     x: 9
     y: 3
     tile: 1069
@@ -1112,21 +1077,6 @@ layers {
   }
   cell {
     x: 11
-    y: 3
-    tile: 1071
-  }
-  cell {
-    x: 16
-    y: 3
-    tile: 1069
-  }
-  cell {
-    x: 17
-    y: 3
-    tile: 1070
-  }
-  cell {
-    x: 18
     y: 3
     tile: 1071
   }
