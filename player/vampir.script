@@ -27,6 +27,7 @@ end
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	self.blood = 100
+	self.object = nil
 
 	self.speed = 100
 
@@ -37,6 +38,17 @@ function init(self)
 	print(blood(self, self.blood))
 
 	sprite.play_flipbook("#sprite", blood(self, self.blood))
+
+	-- sammelbare Items und Stats
+	self.info = false
+	self.coffee = false
+	self.cologne = false
+	self.key = false
+	self.number = false 
+	self.juice = false 
+	self.doll = false 
+	self.tantrum = false 
+	
 end
 
 function final(self)
@@ -64,9 +76,13 @@ function update(self, dt)
 end
 
 function on_message(self, message_id, message, sender)
-	-- Add message-handling code here
-	-- Learn more: https://defold.com/manuals/message-passing/
-	-- Remove this function if not needed
+	if message_id == hash("trigger_response") then
+		if message.enter then
+			self.object = message.other_id
+		else
+			self.object = nil
+		end	
+	end
 end
 
 function on_input(self, action_id, action)
@@ -80,6 +96,10 @@ function on_input(self, action_id, action)
 		self.dir.x = -1
 	elseif action_id == hash("right") then
 		self.dir.x = 1
+		
+	elseif action_id == hash("interact") and action.pressed and self.object then
+		print("interact with ", self.object)
+		msg.post(self.object, "interact")
 	end
 end
 

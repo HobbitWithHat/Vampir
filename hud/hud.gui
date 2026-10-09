@@ -1,0 +1,49 @@
+fonts {
+  name: "always_on_top"
+  font: "/builtins/fonts/debug/always_on_top.font"
+}
+nodes {
+  position {
+    x: 654.0
+    y: 130.0
+  }
+  size {
+    x: 666.0
+    y: 111.0
+  }
+  type: TYPE_BOX
+  id: "background"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_BOX
+  id: "border"
+  parent: "background"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.6
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "Test Test"
+  font: "always_on_top"
+  id: "text"
+  line_break: true
+  parent: "background"
+  inherit_alpha: true
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT
