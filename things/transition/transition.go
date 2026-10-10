@@ -1,5 +1,9 @@
+components {
+  id: "transition"
+  component: "/things/transition/transition.script"
+}
 embedded_components {
-  id: "collisionobject"
+  id: "trigger"
   type: "collisionobject"
   data: "type: COLLISION_OBJECT_TYPE_TRIGGER\n"
   "mass: 0.0\n"

@@ -1,0 +1,48 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	self.background = gui.get_node("background")
+	self.cafe = gui.get_node("cafe_button")
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	-- Add update code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("transition") then
+		gui.animate(self.background, "position.x", 640, gui.EASING_OUTSINE, 1)
+		
+		-- start timer (1s, until animation end)
+		-- Call a simple function to post messages, after timer is done
+		timer.delay(1, false, function() 
+			msg.post("/vampire", "disable")
+			msg.post("/game#main", "unload") 
+								end)
+		
+		
+	end
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("touch") then
+		if gui.pick_node(self.cafe, action.x, action.y) and action.pressed then
+			msg.post("/game#main", "load", { room = "cafe", position = vmath.vector3(-50, -30, 0.1)})
+			msg.post("/vampire", "enable")
+			gui.animate(self.background, "position.x", -640, gui.EASING_OUTSINE, 1)
+		end
+	end
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Learn more: https://defold.com/manuals/hot-reload/
+	-- Remove this function if not needed
+end

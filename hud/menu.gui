@@ -1,49 +1,49 @@
-script: "/hud/hud.gui_script"
+script: "/hud/menu.gui_script"
 fonts {
   name: "always_on_top"
   font: "/builtins/fonts/debug/always_on_top.font"
 }
+textures {
+  name: "main"
+  texture: "/main/main.atlas"
+}
 nodes {
   position {
-    x: 640.0
-    y: 130.0
-  }
-  size {
-    x: 666.0
-    y: 111.0
+    x: -640.0
+    y: 360.0
   }
   type: TYPE_BOX
-  id: "textbox_background"
+  texture: "main/background"
+  id: "background"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
 nodes {
+  type: TYPE_BOX
+  texture: "main/logo"
+  id: "cafe_button"
+  parent: "background"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    y: -77.0
+  }
   size {
     x: 200.0
     y: 100.0
   }
-  type: TYPE_BOX
-  id: "textbox_border"
-  parent: "textbox_background"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  size {
-    x: 650.0
-    y: 100.0
-  }
   color {
-    x: 0.6
+    x: 0.3019608
     y: 0.0
-    z: 0.0
+    z: 0.101960786
   }
   type: TYPE_TEXT
-  text: "Test Test"
+  text: "Cafe"
   font: "always_on_top"
-  id: "textbox_text"
-  line_break: true
-  parent: "textbox_background"
+  id: "cafe_text"
+  parent: "cafe_button"
   inherit_alpha: true
 }
 material: "/builtins/materials/gui.material"

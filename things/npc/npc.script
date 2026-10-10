@@ -4,7 +4,6 @@ local npc = require("things.npc.characters")
 function init(self)
 	self.int = 1
 	self.dialog = nil
-	print("need: " .. npc[self.character]["item"])
 end
 
 
@@ -29,16 +28,3 @@ function on_message(self, message_id, message, sender)
 		end
 	end
 end
-
-
-
---if npc[self.character]["A"][self.dia][self.int] then
---	msg.post("/hud#hud", "show_text", {type = hash("dialog"), content = npc.text[self.dia][self.int]})
---	self.int = self.int+1
---else
---	msg.post("/hud#hud", "hide_text")
---	self.int = 1
---	if npc.text[self.dia+1] then
---		self.dia = self.dia+1
---	end
---end

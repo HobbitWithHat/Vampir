@@ -10,18 +10,20 @@ instances {
 }
 instances {
   id: "changer"
-  prototype: "/things/change/changer.go"
+  prototype: "/things/transition/transition.go"
   position {
     x: -80.57738
     y: -23.71667
+    z: 0.1
   }
 }
 instances {
   id: "changer1"
-  prototype: "/things/change/changer.go"
+  prototype: "/things/transition/transition.go"
   position {
-    x: -80.65298
+    x: -81.0
     y: -39.699528
+    z: 0.1
   }
 }
 scale_along_z: 0

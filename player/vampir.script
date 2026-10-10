@@ -29,11 +29,12 @@ function init(self)
 	self.blood = 100
 	self.object = nil
 
-	self.speed = 60
+	self.speed = 75
 
 	self.dir = vmath.vector3()
 	self.correction = vmath.vector3()
 	self.pp = vmath.vector3()
+	self.transition = false
 
 
 	sprite.play_flipbook("#sprite", blood(self, self.blood))
@@ -100,6 +101,8 @@ function on_message(self, message_id, message, sender)
 
 	elseif message_id == hash("collect") then
 		self.stuff[message.item] = true
+
+	
 	end
 end
 

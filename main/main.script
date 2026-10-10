@@ -1,16 +1,25 @@
 function init(self)
-	self.current = collectionfactory.create("/game#cafe")
+	self.current = collectionfactory.create("/game#cafe", vmath.vector3(0, 0, 0))
+	self.menu = nil
 	print(self.current)
 end
 
 
 
 function on_message(self, message_id, message, sender)
-	if message_id == hash("transition") then
-
-a
+	if message_id == hash("unload") then
+		if self.current then
+			go.delete(self.current)
+			self.current = nil
+		end
 		
+	elseif message_id == hash("load") then
+		local room = "/game#" .. message.room
+		self.current = collectionfactory.create(room)
+		go.set_position(message.position, "/vampire")
 	end
+	
+
 	
 	
 end
