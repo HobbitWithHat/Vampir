@@ -19,6 +19,10 @@ nodes {
   size_mode: SIZE_MODE_AUTO
 }
 nodes {
+  position {
+    x: -366.0
+    y: -240.0
+  }
   type: TYPE_BOX
   texture: "main/logo"
   id: "cafe_button"
@@ -44,6 +48,37 @@ nodes {
   font: "always_on_top"
   id: "cafe_text"
   parent: "cafe_button"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    y: -226.0
+  }
+  type: TYPE_BOX
+  texture: "main/logo"
+  id: "cellar_button"
+  parent: "background"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    y: -79.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.6
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "Basement"
+  font: "always_on_top"
+  id: "cellar_text"
+  parent: "cellar_button"
   inherit_alpha: true
 }
 material: "/builtins/materials/gui.material"

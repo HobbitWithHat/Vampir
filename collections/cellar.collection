@@ -1,2 +1,26 @@
 name: "cellar"
+instances {
+  id: "transition"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: -10.0
+    y: -40.0
+  }
+}
+instances {
+  id: "transition1"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 8.0
+    y: -40.0
+  }
+}
 scale_along_z: 0
+embedded_instances {
+  id: "map"
+  data: "components {\n"
+  "  id: \"cellar\"\n"
+  "  component: \"/maps/cellar.tilemap\"\n"
+  "}\n"
+  ""
+}

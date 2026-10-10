@@ -1,0 +1,364 @@
+tile_set: "/graphics/interior.tilesource"
+layers {
+  id: "ground"
+  z: 0.0
+  cell {
+    x: 0
+    y: -3
+    tile: 833
+  }
+  cell {
+    x: -1
+    y: -3
+    tile: 833
+  }
+  cell {
+    x: 0
+    y: -2
+    tile: 833
+  }
+  cell {
+    x: -1
+    y: -2
+    tile: 833
+  }
+  cell {
+    x: 0
+    y: -1
+    tile: 833
+  }
+  cell {
+    x: 1
+    y: -1
+    tile: 833
+  }
+  cell {
+    x: -2
+    y: -1
+    tile: 833
+  }
+  cell {
+    x: -1
+    y: -1
+    tile: 833
+  }
+  cell {
+    x: 0
+    y: 0
+    tile: 833
+  }
+  cell {
+    x: 1
+    y: 0
+    tile: 833
+  }
+  cell {
+    x: -2
+    y: 0
+    tile: 833
+  }
+  cell {
+    x: -1
+    y: 0
+    tile: 833
+  }
+  cell {
+    x: 0
+    y: 1
+    tile: 833
+  }
+  cell {
+    x: 1
+    y: 1
+    tile: 833
+  }
+  cell {
+    x: -2
+    y: 1
+    tile: 833
+  }
+  cell {
+    x: -1
+    y: 1
+    tile: 833
+  }
+  cell {
+    x: 0
+    y: 2
+    tile: 833
+  }
+  cell {
+    x: 1
+    y: 2
+    tile: 833
+  }
+  cell {
+    x: -2
+    y: 2
+    tile: 833
+  }
+  cell {
+    x: -1
+    y: 2
+    tile: 833
+  }
+  cell {
+    x: 0
+    y: 3
+    tile: 833
+  }
+  cell {
+    x: 1
+    y: 3
+    tile: 833
+  }
+  cell {
+    x: -2
+    y: 3
+    tile: 833
+  }
+  cell {
+    x: -1
+    y: 3
+    tile: 833
+  }
+  cell {
+    x: 0
+    y: 4
+    tile: 538
+  }
+  cell {
+    x: 1
+    y: 4
+    tile: 538
+  }
+  cell {
+    x: -2
+    y: 4
+    tile: 538
+  }
+  cell {
+    x: -1
+    y: 4
+    tile: 538
+  }
+  cell {
+    x: 0
+    y: 5
+    tile: 490
+  }
+  cell {
+    x: 1
+    y: 5
+    tile: 490
+  }
+  cell {
+    x: -2
+    y: 5
+    tile: 490
+  }
+  cell {
+    x: -1
+    y: 5
+    tile: 490
+  }
+  cell {
+    x: 0
+    y: 6
+    tile: 442
+  }
+  cell {
+    x: 1
+    y: 6
+    tile: 442
+  }
+  cell {
+    x: -2
+    y: 6
+    tile: 442
+  }
+  cell {
+    x: -1
+    y: 6
+    tile: 442
+  }
+}
+layers {
+  id: "door"
+  z: 0.0
+  cell {
+    x: 0
+    y: 4
+    tile: 965
+  }
+  cell {
+    x: -1
+    y: 4
+    tile: 964
+  }
+  cell {
+    x: 0
+    y: 5
+    tile: 917
+  }
+  cell {
+    x: -1
+    y: 5
+    tile: 916
+  }
+}
+layers {
+  id: "rim"
+  z: 0.0
+  cell {
+    x: 0
+    y: -3
+    tile: 679
+  }
+  cell {
+    x: 1
+    y: -3
+    tile: 776
+  }
+  cell {
+    x: -2
+    y: -3
+    tile: 774
+  }
+  cell {
+    x: -1
+    y: -3
+    tile: 679
+  }
+  cell {
+    x: 1
+    y: -2
+    tile: 728
+  }
+  cell {
+    x: -2
+    y: -2
+    tile: 726
+  }
+  cell {
+    x: 1
+    y: -1
+    tile: 729
+  }
+  cell {
+    x: 2
+    y: -1
+    tile: 776
+  }
+  cell {
+    x: -3
+    y: -1
+    tile: 774
+  }
+  cell {
+    x: -2
+    y: -1
+    tile: 730
+  }
+  cell {
+    x: 2
+    y: 0
+    tile: 728
+  }
+  cell {
+    x: -3
+    y: 0
+    tile: 726
+  }
+  cell {
+    x: 2
+    y: 1
+    tile: 728
+  }
+  cell {
+    x: -3
+    y: 1
+    tile: 726
+  }
+  cell {
+    x: 2
+    y: 2
+    tile: 728
+  }
+  cell {
+    x: -3
+    y: 2
+    tile: 726
+  }
+  cell {
+    x: 2
+    y: 3
+    tile: 728
+  }
+  cell {
+    x: -3
+    y: 3
+    tile: 726
+  }
+  cell {
+    x: 2
+    y: 4
+    tile: 728
+  }
+  cell {
+    x: -3
+    y: 4
+    tile: 726
+  }
+  cell {
+    x: 2
+    y: 5
+    tile: 728
+  }
+  cell {
+    x: -3
+    y: 5
+    tile: 726
+  }
+  cell {
+    x: 2
+    y: 6
+    tile: 728
+  }
+  cell {
+    x: -3
+    y: 6
+    tile: 726
+  }
+  cell {
+    x: 0
+    y: 7
+    tile: 679
+  }
+  cell {
+    x: 1
+    y: 7
+    tile: 679
+  }
+  cell {
+    x: 2
+    y: 7
+    tile: 680
+  }
+  cell {
+    x: -3
+    y: 7
+    tile: 678
+  }
+  cell {
+    x: -2
+    y: 7
+    tile: 679
+  }
+  cell {
+    x: -1
+    y: 7
+    tile: 679
+  }
+}
+material: "/builtins/materials/tile_map.material"

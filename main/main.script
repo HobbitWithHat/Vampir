@@ -12,15 +12,12 @@ function on_message(self, message_id, message, sender)
 			go.delete(self.current)
 			self.current = nil
 		end
-		
+		-- load new room as specified in tge message
+		-- after loading room, set position of the vampire
 	elseif message_id == hash("load") then
 		local room = "/game#" .. message.room
 		self.current = collectionfactory.create(room)
 		go.set_position(message.position, "/vampire")
 	end
-	
-
-	
-	
 end
 

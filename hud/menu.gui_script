@@ -1,7 +1,13 @@
+local function close(self)
+	msg.post("/vampire", "enable")
+	gui.animate(self.background, "position.x", -640, gui.EASING_OUTSINE, 1)
+end
+
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	self.background = gui.get_node("background")
 	self.cafe = gui.get_node("cafe_button")
+	self.cellar = gui.get_node("cellar_button")
 end
 
 function final(self)
@@ -26,17 +32,18 @@ function on_message(self, message_id, message, sender)
 			msg.post("/vampire", "disable")
 			msg.post("/game#main", "unload") 
 								end)
-		
-		
 	end
 end
 
 function on_input(self, action_id, action)
 	if action_id == hash("touch") then
 		if gui.pick_node(self.cafe, action.x, action.y) and action.pressed then
-			msg.post("/game#main", "load", { room = "cafe", position = vmath.vector3(-50, -30, 0.1)})
-			msg.post("/vampire", "enable")
-			gui.animate(self.background, "position.x", -640, gui.EASING_OUTSINE, 1)
+			msg.post("/game#main", "load", { room = "cafe", position = vmath.vector3(-50, -30, 0.1) })
+			close(self)
+		elseif gui.pick_node(self.cellar, action.x, action.y) and action.pressed then
+			msg.post("/game#main", "load", {room = "cellar", position = vmath.vector3(0, -20, 0.1)})
+			close(self)
+			
 		end
 	end
 end
