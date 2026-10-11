@@ -15,12 +15,33 @@ instances {
     y: -40.0
   }
 }
+instances {
+  id: "interact"
+  prototype: "/things/interacts/door.go"
+  position {
+    x: 0.927859
+    y: 56.081024
+    z: 0.1
+  }
+}
 scale_along_z: 0
 embedded_instances {
   id: "map"
   data: "components {\n"
   "  id: \"cellar\"\n"
   "  component: \"/maps/cellar.tilemap\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"collider\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"/maps/cellar.tilemap\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"default\\\"\\n"
+  "mask: \\\"player\\\"\\n"
+  "\"\n"
   "}\n"
   ""
 }

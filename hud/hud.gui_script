@@ -2,11 +2,13 @@ function init(self)
 	self.background = gui.get_node("textbox_background")
 	self.border = gui.get_node("textbox_border")
 	self.text = gui.get_node("textbox_text")
+	self.fog = gui.get_node("fog")
 
 	gui.set_visible(self.background, false)
 	gui.set_visible(self.border, false)
 	gui.set_visible(self.text, false)
 end
+
 
 function final(self)
 	-- Add finalization code here
@@ -31,6 +33,13 @@ function on_message(self, message_id, message, sender)
 		gui.set_visible(self.background, false)
 		gui.set_visible(self.border, false)
 		gui.set_visible(self.text, false)
+
+	elseif message_id == hash("fade") then
+		if message.out then
+			gui.animate(self.fog, gui.PROP_COLOR, vmath.vector4(1,1,1,1), gui.EASING_LINEAR, 0.5)
+		else
+			gui.animate(self.fog, gui.PROP_COLOR, vmath.vector4(1,1,1,0), gui.EASING_LINEAR, 0.5)
+		end
 	end
 end
 

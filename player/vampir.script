@@ -44,7 +44,7 @@ function init(self)
 		info = false,
 		coffee = false,
 		cologne = false,
-		key = false,
+		key = true,
 		number = false,
 		juice = false,
 		doll = false,
