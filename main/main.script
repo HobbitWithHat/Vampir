@@ -24,7 +24,7 @@ function on_message(self, message_id, message, sender)
 		msg.post("/hud#hud", "fade", { out = true })
 		timer.delay(0.5, false, function() 
 			msg.post("#", "unload")
-			msg.post("#", "load", {room = "cellar2"})
+			msg.post("#", "load", {room = "cellar2", position = vmath.vector3(0, 56, 0.1)})
 			msg.post("/hud#hud", "fade", {out=false})
 		end)
 		

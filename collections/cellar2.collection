@@ -15,6 +15,23 @@ instances {
     y: 81.15279
   }
 }
+instances {
+  id: "npc"
+  prototype: "/things/npc/npc.go"
+  position {
+    x: 99.14483
+    y: 38.953506
+    z: 0.1
+  }
+  component_properties {
+    id: "npc"
+    properties {
+      id: "character"
+      value: "cellar"
+      type: PROPERTY_TYPE_HASH
+    }
+  }
+}
 scale_along_z: 0
 embedded_instances {
   id: "map"

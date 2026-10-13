@@ -1,2 +1,46 @@
 name: "girl"
+instances {
+  id: "transition"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 48.13559
+    y: 80.856384
+  }
+}
+instances {
+  id: "npc"
+  prototype: "/things/npc/npc.go"
+  position {
+    x: 205.14938
+    y: 43.57314
+  }
+  component_properties {
+    id: "npc"
+    properties {
+      id: "character"
+      value: "girl"
+      type: PROPERTY_TYPE_HASH
+    }
+  }
+}
 scale_along_z: 0
+embedded_instances {
+  id: "map"
+  data: "components {\n"
+  "  id: \"girl\"\n"
+  "  component: \"/maps/girl.tilemap\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"collider\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"/maps/girl.tilemap\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"default\\\"\\n"
+  "mask: \\\"player\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+}
