@@ -22,7 +22,7 @@ M = {
 	},
 
 	[hash("cellar")] = {
-		name = "Cellarperson",
+		name = "Basementperson",
 		item = "cologne",
 		give = "coffee",
 		A = {"Hhhhhhhhhhh", "Who visits the one who dwells in the cellar?", 
@@ -38,7 +38,9 @@ M = {
 		item = "doll",
 		give = "cologne",
 		A = {"Oh hey Mr. Vampire. have you found my doll?", "Aww, but I told you about it!",
-			"I lost my doll. It must by so lonely right now...", "Please, can you find it, please please?"}
+			"I lost my doll. It must by so lonely right now...", "Please, can you find it, please please?"},
+		B = {"My doll!!", "Thank you Mr. Vampire!", "Here, take this.", 
+			"This Parfum is my favourite. Now you won't smell so bad anymore!"}
 	}
 	
 }
