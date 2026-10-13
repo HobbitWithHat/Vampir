@@ -1,5 +1,4 @@
 
-
 local function blood(self, value)
 	if value >= 90 then
 		return "10"
@@ -36,8 +35,11 @@ function init(self)
 	self.pp = vmath.vector3()
 	self.transition = false
 
+	self.current_body = hash("idle")
+	self.current_head = hash("head_center")
 
-	sprite.play_flipbook("#sprite", blood(self, self.blood))
+	sprite.play_flipbook("#body", self.current_body)
+	sprite.play_flipbook("#head", self.current_head)
 
 	-- sammelbare Items und Stats
 	self.stuff = {
@@ -57,6 +59,10 @@ end
 function update(self, dt)
 	self.correction = vmath.vector3()
 
+	local head = self.current_head
+	local body = self.current_body
+	
+
 	-- normiert den Bewegungsvektor
 	if vmath.length(self.dir) > 1 then
 		self.dir = vmath.normalize(self.dir)
@@ -66,8 +72,39 @@ function update(self, dt)
 	local new_p = p + self.dir * self.speed * dt
 	go.set_position(new_p)
 
-	self.dir = vmath.vector3()
+	-- Depending on the direction vector change it to a proper animation:
+	if self.dir.x > 0 then
+		body = hash("walk_right")
+		head = hash("head_right")
+	elseif self.dir.x < 0 then
+		body = hash("walk_left")
+		head = hash("head_left")
+	elseif self.dir.y > 0 then
+		body = hash("walk_straight")
+		head = hash("head_center")
+	elseif self.dir.y < 0 then
+		body = hash("walk_straight")
+		head = hash("head_center")
 
+	elseif self.dir.x == 0 and self.dir.y == 0 then
+		body = hash("idle")
+		head = hash("head_center")
+	end
+
+
+	-- if the animation we decided to play is different from the xurrent one playing:
+	if self.current_head ~= head then 
+		sprite.play_flipbook("#head", head) -- Play the new Animation
+		self.current_head = head -- an update the variable tracking the current nimation
+	end
+	
+	if self.current_body ~= body then
+		sprite.play_flipbook("#body", body) -- Play the new Animation
+		self.current_body = body -- an update the variable tracking the current nimation
+	end
+
+	self.dir = vmath.vector3()
+	
 end
 
 function on_message(self, message_id, message, sender)

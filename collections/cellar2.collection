@@ -1,0 +1,38 @@
+name: "cellar2"
+instances {
+  id: "transition"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: -8.688591
+    y: 81.15279
+  }
+}
+instances {
+  id: "transition1"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 7.311409
+    y: 81.15279
+  }
+}
+scale_along_z: 0
+embedded_instances {
+  id: "map"
+  data: "components {\n"
+  "  id: \"cellar2\"\n"
+  "  component: \"/maps/cellar2.tilemap\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"collider\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"/maps/cellar2.tilemap\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"default\\\"\\n"
+  "mask: \\\"player\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+}

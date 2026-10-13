@@ -184,30 +184,6 @@ layers {
   }
 }
 layers {
-  id: "door"
-  z: 0.0
-  cell {
-    x: 0
-    y: 4
-    tile: 965
-  }
-  cell {
-    x: -1
-    y: 4
-    tile: 964
-  }
-  cell {
-    x: 0
-    y: 5
-    tile: 917
-  }
-  cell {
-    x: -1
-    y: 5
-    tile: 916
-  }
-}
-layers {
   id: "rim"
   z: 0.0
   cell {

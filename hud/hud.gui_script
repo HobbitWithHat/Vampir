@@ -36,9 +36,9 @@ function on_message(self, message_id, message, sender)
 
 	elseif message_id == hash("fade") then
 		if message.out then
-			gui.animate(self.fog, gui.PROP_COLOR, vmath.vector4(1,1,1,1), gui.EASING_LINEAR, 0.5)
+			gui.animate(self.fog, gui.PROP_COLOR, vmath.vector4(0,0,0,1), gui.EASING_LINEAR, 0.5)
 		else
-			gui.animate(self.fog, gui.PROP_COLOR, vmath.vector4(1,1,1,0), gui.EASING_LINEAR, 0.5)
+			gui.animate(self.fog, gui.PROP_COLOR, vmath.vector4(0,0,0,0), gui.EASING_LINEAR, 0.5)
 		end
 	end
 end

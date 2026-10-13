@@ -1,10 +1,19 @@
-function init(self)
-	sprite.play_flipbook("#sprite_tl", "cdoor_c1")
-	sprite.play_flipbook("#sprite_tr", "cdoor_c2")
-	sprite.play_flipbook("#sprite_bl", "cdoor_c3")
-	sprite.play_flipbook("#sprite_br", "cdoor_c4")
+go.property("open", false)
 
-	self.open = false
+function init(self)
+	if self.open == false then
+		sprite.play_flipbook("#sprite_tl", "cdoor_c1")
+		sprite.play_flipbook("#sprite_tr", "cdoor_c2")
+		sprite.play_flipbook("#sprite_bl", "cdoor_c3")
+		sprite.play_flipbook("#sprite_br", "cdoor_c4")
+	else
+		sprite.play_flipbook("#sprite_tl", "cdoor_o1")
+		sprite.play_flipbook("#sprite_tr", "cdoor_o2")
+		sprite.play_flipbook("#sprite_bl", "cdoor_o3")
+		sprite.play_flipbook("#sprite_br", "cdoor_o4")
+	end
+
+
 	self.text = false
 end
 
@@ -37,19 +46,24 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("interact") then
-		if message.stuff["key"] then
-			sprite.play_flipbook("#sprite_tl", "cdoor_o1")
-			sprite.play_flipbook("#sprite_tr", "cdoor_o2")
-			sprite.play_flipbook("#sprite_bl", "cdoor_o3")
-			sprite.play_flipbook("#sprite_br", "cdoor_o4")
-			self.open = true
+		if self.open then
+			print("go through")
+			msg.post("/game#main", "cellar")
 		else
-			if self.text then
-				msg.post("/hud#hud", "hide_text")
-				self.text = false
+			if message.stuff["key"] then
+				sprite.play_flipbook("#sprite_tl", "cdoor_o1")
+				sprite.play_flipbook("#sprite_tr", "cdoor_o2")
+				sprite.play_flipbook("#sprite_bl", "cdoor_o3")
+				sprite.play_flipbook("#sprite_br", "cdoor_o4")
+				self.open = true
 			else
-				msg.post("/hud#hud", "show_text", { text = ("It's locked. I need the cellar key")})
-				self.text = true
+				if self.text then
+					msg.post("/hud#hud", "hide_text")
+					self.text = false
+				else
+					msg.post("/hud#hud", "show_text", { text = ("It's locked. I need the cellar key")})
+					self.text = true
+				end
 			end
 		end
 	elseif message_id == hash("trigger_response") then

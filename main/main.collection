@@ -26,6 +26,12 @@ embedded_instances {
   "  data: \"prototype: \\\"/collections/cellar.collection\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"cellar2\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/collections/cellar2.collection\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {

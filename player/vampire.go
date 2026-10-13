@@ -3,9 +3,9 @@ components {
   component: "/player/vampir.script"
 }
 embedded_components {
-  id: "sprite"
+  id: "body"
   type: "sprite"
-  data: "default_animation: \"10\"\n"
+  data: "default_animation: \"idle\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "textures {\n"
   "  sampler: \"texture_sampler\"\n"
@@ -32,10 +32,29 @@ embedded_components {
   "    }\n"
   "    index: 0\n"
   "    count: 3\n"
+  "    id: \"body\"\n"
   "  }\n"
   "  data: 7.0\n"
-  "  data: 7.0\n"
+  "  data: 8.0\n"
   "  data: 8.0\n"
   "}\n"
   ""
+}
+embedded_components {
+  id: "head"
+  type: "sprite"
+  data: "default_animation: \"head_center\"\n"
+  "material: \"/builtins/materials/sprite.material\"\n"
+  "size {\n"
+  "  x: 16.0\n"
+  "  y: 16.0\n"
+  "}\n"
+  "textures {\n"
+  "  sampler: \"texture_sampler\"\n"
+  "  texture: \"/graphics/vampir.tilesource\"\n"
+  "}\n"
+  ""
+  position {
+    y: 16.0
+  }
 }

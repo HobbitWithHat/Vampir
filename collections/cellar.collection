@@ -19,9 +19,16 @@ instances {
   id: "interact"
   prototype: "/things/interacts/door.go"
   position {
-    x: 0.927859
-    y: 56.081024
+    y: 80.081024
     z: 0.1
+  }
+  component_properties {
+    id: "door"
+    properties {
+      id: "open"
+      value: "true"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
   }
 }
 scale_along_z: 0
