@@ -16814,35 +16814,77 @@ animations {
   id: "cdoor_c2"
   start_tile: 918
   end_tile: 918
+  playback: PLAYBACK_NONE
+  fps: 0
 }
 animations {
   id: "cdoor_c3"
   start_tile: 965
   end_tile: 965
+  playback: PLAYBACK_NONE
+  fps: 0
 }
 animations {
   id: "cdoor_c4"
   start_tile: 966
   end_tile: 966
+  playback: PLAYBACK_NONE
+  fps: 0
 }
 animations {
   id: "cdoor_o1"
   start_tile: 629
   end_tile: 629
+  playback: PLAYBACK_NONE
+  fps: 0
 }
 animations {
   id: "cdoor_o2"
   start_tile: 630
   end_tile: 630
+  playback: PLAYBACK_NONE
+  fps: 0
 }
 animations {
   id: "cdoor_o3"
   start_tile: 677
   end_tile: 677
+  playback: PLAYBACK_NONE
+  fps: 0
 }
 animations {
   id: "cdoor_o4"
   start_tile: 678
   end_tile: 678
+  playback: PLAYBACK_NONE
+  fps: 0
+}
+animations {
+  id: "vend_1"
+  start_tile: 3172
+  end_tile: 3172
+  playback: PLAYBACK_NONE
+  fps: 0
+}
+animations {
+  id: "vend_2"
+  start_tile: 3177
+  end_tile: 3177
+  playback: PLAYBACK_NONE
+  fps: 0
+}
+animations {
+  id: "vend_3"
+  start_tile: 3268
+  end_tile: 3268
+  playback: PLAYBACK_NONE
+  fps: 0
+}
+animations {
+  id: "vend_4"
+  start_tile: 3273
+  end_tile: 3273
+  playback: PLAYBACK_NONE
+  fps: 0
 }
 extrude_borders: 2

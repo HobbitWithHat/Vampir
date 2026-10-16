@@ -38,6 +38,12 @@ embedded_instances {
   "  data: \"prototype: \\\"/collections/girl.collection\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"alley\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/collections/alley.collection\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {

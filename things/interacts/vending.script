@@ -1,0 +1,37 @@
+function init(self)
+	sprite.play_flipbook("#sprite_tl", "vend_1")
+	sprite.play_flipbook("#sprite_tr", "vend_2")
+	sprite.play_flipbook("#sprite_bl", "vend_3")
+	sprite.play_flipbook("#sprite_br", "vend_4")
+
+	self.text = false
+end
+
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("interact") then
+		if message.stuff["coin"] then
+			if self.text then
+				msg.post("/hud#hud", "hide_text")
+			else
+				msg.post("/hud#hud", "show_text", { text = "Yeah, Tantrum! I thought this stuff was illegal."})
+				msg.post(sender, "collect", {item = "tantrum"})
+				self.text = true
+			end
+
+		else
+			if self.text then
+				msg.post("/hud#hud", "hide_text")
+				self.text = false
+			else
+				msg.post("/hud#hud", "show_text", { text = ("Oh hey, it's the programmers rendition of a vending machine. It has stuff like Pokari and Tantrum")})
+				self.text = true
+			end
+		end
+	elseif message_id == hash("trigger_response") then
+		if message.enter == false then
+			msg.post("/hud#hud", "hide_text")
+			self.text = false
+		end
+	end
+end

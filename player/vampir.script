@@ -46,11 +46,12 @@ function init(self)
 		info = false,
 		coffee = false,
 		cologne = false,
-		key = true,
+		key = false,
 		number = false,
 		juice = false,
 		doll = false,
 		tantrum = false,
+		coin = false,
 	}
 
 	

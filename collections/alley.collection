@@ -1,2 +1,79 @@
 name: "alley"
+instances {
+  id: "vending"
+  prototype: "/things/interacts/vending.go"
+  position {
+    x: 131.87352
+    y: 166.77242
+    z: 0.1
+  }
+}
+instances {
+  id: "transition"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: -6.910829
+    y: 0.248364
+  }
+}
+instances {
+  id: "transition1"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 9.089171
+    y: 0.248364
+  }
+}
+instances {
+  id: "transition2"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 26.08917
+    y: 0.248364
+  }
+}
+instances {
+  id: "transition3"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 297.08917
+    y: 0.248364
+  }
+}
+instances {
+  id: "transition4"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 313.08917
+    y: 0.248364
+  }
+}
+instances {
+  id: "transition5"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 329.08917
+    y: 0.248364
+  }
+}
 scale_along_z: 0
+embedded_instances {
+  id: "map"
+  data: "components {\n"
+  "  id: \"alley\"\n"
+  "  component: \"/maps/alley.tilemap\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"collider\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"/maps/alley.tilemap\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"default\\\"\\n"
+  "mask: \\\"player\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+}
