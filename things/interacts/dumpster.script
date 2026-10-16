@@ -1,0 +1,49 @@
+function init(self)
+	sprite.play_flipbook("#sprite_tl", "vend_1")
+	sprite.play_flipbook("#sprite_tr", "vend_2")
+	sprite.play_flipbook("#sprite_bl", "vend_3")
+	sprite.play_flipbook("#sprite_br", "vend_4")
+
+	self.text = false
+
+	self.joke = {
+		[1] = "Hey, this is the entire Twilight Saga. Why would anyone through this away?",
+		[2] = "Wow, this is the world climate politics. How did they get here?",
+		[3] = "That's weird, someone managed to fit every piece of AI-Art in here.",
+		[4] = "Oh my God! The entire Zack Snyder Collection!",
+		[5] = "How curious, I didn't know you could through away the players least favourite thing. Very considerate."
+	}
+
+end
+
+
+function on_message(self, message_id, message, sender)
+	math.randomseed(os.time())
+	
+	if message_id == hash("interact") then
+		if message.stuff["doll"] then
+			if self.text then
+				msg.post("/hud#hud", "hide_text")
+			else
+				local number = math.random(5)
+				msg.post("/hud#hud", "show_text", { text = self.joke[number]})
+				self.text = true
+			end
+
+		else
+			if self.text then
+				msg.post("/hud#hud", "hide_text")
+				self.text = false
+			else
+				msg.post("/hud#hud", "show_text", { text = ("Someone threw away a little doll. How sad, I should rescue it.")})
+				msg.post(sender, "collect", {item = "doll"})
+				self.text = true
+			end
+		end
+	elseif message_id == hash("trigger_response") then
+		if message.enter == false then
+			msg.post("/hud#hud", "hide_text")
+			self.text = false
+		end
+	end
+end
