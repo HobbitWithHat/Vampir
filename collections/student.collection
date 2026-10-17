@@ -1,2 +1,57 @@
 name: "student"
+instances {
+  id: "npc"
+  prototype: "/things/npc/npc.go"
+  position {
+    x: 190.32251
+    y: 68.08653
+    z: 0.1
+  }
+  component_properties {
+    id: "npc"
+    properties {
+      id: "character"
+      value: "student"
+      type: PROPERTY_TYPE_HASH
+    }
+  }
+}
+instances {
+  id: "transition"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: -48.464314
+    y: 36.301376
+    z: 0.1
+  }
+}
+instances {
+  id: "transition1"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 224.53569
+    y: 113.30138
+    z: 0.1
+  }
+}
 scale_along_z: 0
+embedded_instances {
+  id: "map"
+  data: "components {\n"
+  "  id: \"student\"\n"
+  "  component: \"/maps/student.tilemap\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"collider\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"/maps/student.tilemap\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"default\\\"\\n"
+  "mask: \\\"player\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+}

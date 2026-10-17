@@ -9,7 +9,7 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("interact") then
-		if message.stuff[npc[self.character]["item"]] == true then
+		if message.stuff[npc[self.character]["want"]] == true then
 			self.dialog = "B"
 			if message.stuff[npc[self.character]["give"]] == false then
 				msg.post(sender, "collect", { item = npc[self.character]["give"] })

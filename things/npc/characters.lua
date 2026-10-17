@@ -3,7 +3,7 @@ local M = {}
 M = {
 	[hash("stranger")] = {
 		name = "Stranger",
-		item = "info",
+		want = "info",
 		give = nil,
 		A = {"It's rude to talk to strangers."},
 		B = {"Oh hey, it's you.", "I wondered where you been"},
@@ -11,7 +11,7 @@ M = {
 
 	[hash("cafe")] = {
 		name = "Barista",
-		item = "coffee",
+		want = "coffee",
 		give = "info",
 		A = {"Oh, the vampire. Whazzup?", "Hope nothing sucks, hehe", "Yeah, I'm sorry.", 
 			"Want to see your friend? I'm sorry, but you know, I can't give out infos about customers.",
@@ -23,7 +23,7 @@ M = {
 
 	[hash("cellar")] = {
 		name = "Basementperson",
-		item = "cologne",
+		want = "cologne",
 		give = "coffee",
 		A = {"Hhhhhhhhhhh", "Who visits the one who dwells in the cellar?", 
 			"The coffee? I have it here. It smells so nice, it softens the stench of the darkness",
@@ -35,14 +35,19 @@ M = {
 
 	[hash("girl")] = {
 		name = "Girl",
-		item = "doll",
+		want = "doll",
 		give = "cologne",
 		A = {"Oh hey Mr. Vampire. have you found my doll?", "Aww, but I told you about it!",
 			"I lost my doll. It must by so lonely right now...", "Please, can you find it, please please?"},
 		B = {"My doll!!", "Thank you Mr. Vampire!", "Here, take this.", 
 			"This Parfum is my favourite. Now you won't smell so bad anymore!"}
+	},
+
+	[hash("student")] = {
+		name = "Student",
+		want = "",
+		give = "juice"
 	}
-	
 }
 
 return M
