@@ -50,6 +50,12 @@ embedded_instances {
   "  data: \"prototype: \\\"/collections/student.collection\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"janitor\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/collections/janitor.collection\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {

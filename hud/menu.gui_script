@@ -12,6 +12,7 @@ function init(self)
 	self.girl = gui.get_node("girl_button")
 	self.alley = gui.get_node("alley_button")
 	self.student = gui.get_node("student_button")
+	self.janitor = gui.get_node("janitor_button")
 end
 
 function on_message(self, message_id, message, sender)
@@ -44,6 +45,9 @@ function on_input(self, action_id, action)
 			close(self)
 		elseif gui.pick_node(self.student, action.x, action.y) and action.pressed then
 			msg.post("/game#main", "load", {room = "student", position = vmath.vector3(-50, 16, 0.1)})
+			close(self)
+		elseif gui.pick_node(self.janitor, action.x, action.y) and action.pressed then
+			msg.post("game#main", "load", {room = "janitor", position = vmath.vector3(-20, 0, 0.1)})
 			close(self)
 		end
 	end

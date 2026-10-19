@@ -16,7 +16,6 @@ nodes {
   texture: "main/background"
   id: "background"
   inherit_alpha: true
-  alpha: 0.0
   size_mode: SIZE_MODE_AUTO
 }
 nodes {
@@ -176,6 +175,38 @@ nodes {
   font: "always_on_top"
   id: "student_text"
   parent: "student_button"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: -363.0
+    y: -3.0
+  }
+  type: TYPE_BOX
+  texture: "main/logo"
+  id: "janitor_button"
+  parent: "background"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    y: -77.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.3019608
+    y: 0.0
+    z: 0.101960786
+  }
+  type: TYPE_TEXT
+  text: "Janitor"
+  font: "always_on_top"
+  id: "janitor_text"
+  parent: "janitor_button"
   inherit_alpha: true
 }
 material: "/builtins/materials/gui.material"

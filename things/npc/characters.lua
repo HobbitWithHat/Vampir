@@ -46,7 +46,20 @@ M = {
 	[hash("student")] = {
 		name = "Student",
 		want = "",
-		give = "juice"
+		give = "juice",
+		A = {"Eyyy, man...", "Whaddyadoere... lemmesleeb"}
+	},
+
+	[hash("janitor")] = {
+		name = "Janitor",
+		want = "juice",
+		give = "key",
+		A = {"Good day, Vampire-Sir, How can this humble Janitor serve you?", "You need the keys for the basement?",
+			"I'm sorry, Vampire-Sir, but it would dishonor the codex of my order to just hand it to you",
+			"But since the holy law of reciprocity applies, I shall give it to you in return for help.",
+			"My scurvy is showing it's bloody grin again. Find me some juice, and the keys shall be yours.",},
+		B = {"You have returned, and the juice may extend my life.", "On behalf of the holy Order of the Janitory, I thank and salute you.",
+			"You have made a powerful ally today.", "as promised, here you may have the keys for the basement."}
 	}
 }
 
