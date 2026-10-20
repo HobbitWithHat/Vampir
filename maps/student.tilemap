@@ -1042,6 +1042,21 @@ layers {
   id: "deco"
   z: 0.0
   cell {
+    x: 13
+    y: 1
+    tile: 373
+  }
+  cell {
+    x: 10
+    y: 2
+    tile: 373
+  }
+  cell {
+    x: 12
+    y: 4
+    tile: 373
+  }
+  cell {
     x: -4
     y: 4
     tile: 925
@@ -1062,6 +1077,11 @@ layers {
     tile: 878
   }
   cell {
+    x: 12
+    y: 6
+    tile: 1127
+  }
+  cell {
     x: 0
     y: 7
     tile: 954
@@ -1070,6 +1090,11 @@ layers {
     x: 1
     y: 7
     tile: 955
+  }
+  cell {
+    x: 12
+    y: 7
+    tile: 1079
   }
   cell {
     x: 13
@@ -1206,6 +1231,16 @@ layers {
     tile: 1205
   }
   cell {
+    x: 3
+    y: 4
+    tile: 2942
+  }
+  cell {
+    x: 11
+    y: 4
+    tile: 2943
+  }
+  cell {
     x: 0
     y: 5
     tile: 1156
@@ -1216,6 +1251,16 @@ layers {
     tile: 1157
   }
   cell {
+    x: 3
+    y: 5
+    tile: 2894
+  }
+  cell {
+    x: 11
+    y: 5
+    tile: 2895
+  }
+  cell {
     x: 0
     y: 6
     tile: 1108
@@ -1224,6 +1269,21 @@ layers {
     x: 1
     y: 6
     tile: 1109
+  }
+  cell {
+    x: 3
+    y: 6
+    tile: 2846
+  }
+  cell {
+    x: 4
+    y: 6
+    tile: 2979
+  }
+  cell {
+    x: 5
+    y: 6
+    tile: 2981
   }
   cell {
     x: 6
@@ -1241,6 +1301,21 @@ layers {
     tile: 1170
   }
   cell {
+    x: 9
+    y: 6
+    tile: 2982
+  }
+  cell {
+    x: 10
+    y: 6
+    tile: 2984
+  }
+  cell {
+    x: 11
+    y: 6
+    tile: 2847
+  }
+  cell {
     x: 0
     y: 7
     tile: 1060
@@ -1249,6 +1324,21 @@ layers {
     x: 1
     y: 7
     tile: 1061
+  }
+  cell {
+    x: 3
+    y: 7
+    tile: 2798
+  }
+  cell {
+    x: 4
+    y: 7
+    tile: 2931
+  }
+  cell {
+    x: 5
+    y: 7
+    tile: 2933
   }
   cell {
     x: 6
@@ -1265,14 +1355,134 @@ layers {
     y: 7
     tile: 1074
   }
+  cell {
+    x: 9
+    y: 7
+    tile: 2934
+  }
+  cell {
+    x: 10
+    y: 7
+    tile: 2936
+  }
+  cell {
+    x: 11
+    y: 7
+    tile: 2799
+  }
+  cell {
+    x: 3
+    y: 8
+    tile: 2750
+  }
+  cell {
+    x: 4
+    y: 8
+    tile: 2883
+  }
+  cell {
+    x: 5
+    y: 8
+    tile: 2885
+  }
+  cell {
+    x: 9
+    y: 8
+    tile: 2886
+  }
+  cell {
+    x: 10
+    y: 8
+    tile: 2888
+  }
+  cell {
+    x: 11
+    y: 8
+    tile: 2751
+  }
 }
 layers {
   id: "sink"
   z: 0.0
   cell {
+    x: 14
+    y: -1
+    tile: 1710
+  }
+  cell {
+    x: 14
+    y: 0
+    tile: 1662
+  }
+  cell {
     x: -5
     y: 3
     tile: 1175
+  }
+  cell {
+    x: 3
+    y: 4
+    tile: 2139
+  }
+  cell {
+    x: 3
+    y: 5
+    tile: 2091
+  }
+  cell {
+    x: 7
+    y: 5
+    tile: 1592
+  }
+  cell {
+    x: 10
+    y: 5
+    tile: 521
+  }
+  cell {
+    x: -6
+    y: 5
+    tile: 187
+  }
+  cell {
+    x: -5
+    y: 5
+    tile: 188
+  }
+  cell {
+    x: -4
+    y: 5
+    tile: 189
+  }
+  cell {
+    x: 3
+    y: 6
+    tile: 2043
+  }
+  cell {
+    x: 7
+    y: 6
+    tile: 1544
+  }
+  cell {
+    x: 3
+    y: 7
+    tile: 523
+  }
+  cell {
+    x: 6
+    y: 7
+    tile: 191
+  }
+  cell {
+    x: 8
+    y: 7
+    tile: 377
+  }
+  cell {
+    x: 11
+    y: 8
+    tile: 472
   }
 }
 layers {

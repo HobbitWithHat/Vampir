@@ -43,11 +43,12 @@ M = {
 			"This Parfum is my favourite. Now you won't smell so bad anymore!"}
 	},
 
-	[hash("student")] = {
-		name = "Student",
-		want = "",
-		give = "juice",
-		A = {"Eyyy, man...", "Whaddyadoere... lemmesleeb"}
+	[hash("guy")] = {
+		name = "guy",
+		want = "tantrum",
+		give = "action_student",
+		A = {"Eyyy, man...", "Whaddyadoere... lemmesleeb", "**he needs something strong to wake up**"},
+		B = {"Whahahatis that?", "Tantrum? Thanks, I really needed thaaaa...", "...", "A VAMPIRE! AAAAAAAAAAH!!!"}
 	},
 
 	[hash("janitor")] = {
