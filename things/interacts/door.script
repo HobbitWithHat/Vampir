@@ -21,7 +21,7 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("interact") then
 		if self.open then					-- is door open?
 			print("go through")				-- if open, go through
-			msg.post("/game#main", "cellar")
+			msg.post("/game#main", "switch", {room = "cellar2", position = vmath.vector3(0, 56, 0.1)})
 		else
 			if message.stuff["key"] then	-- if closed, but has key, open door
 				sprite.play_flipbook("#sprite_tl", "cdoor_o1")

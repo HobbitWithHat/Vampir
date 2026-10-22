@@ -48,9 +48,9 @@ function init(self)
 		cologne = false,
 		key = false,
 		number = false,
-		juice = true,
+		juice = false,
 		doll = false,
-		tantrum = false,
+		tantrum = true,
 		coin = false,
 	}
 

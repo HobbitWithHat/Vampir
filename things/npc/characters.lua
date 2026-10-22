@@ -44,7 +44,7 @@ M = {
 	},
 
 	[hash("guy")] = {
-		name = "guy",
+		name = "Guy",
 		want = "tantrum",
 		give = "action_student",
 		A = {"Eyyy, man...", "Whaddyadoere... lemmesleeb", "**he needs something strong to wake up**"},
@@ -61,6 +61,13 @@ M = {
 			"My scurvy is showing it's bloody grin again. Find me some juice, and the keys shall be yours.",},
 		B = {"You have returned, and the juice may extend my life.", "On behalf of the holy Order of the Janitory, I thank and salute you.",
 			"You have made a powerful ally today.", "as promised, here you may have the keys for the basement."}
+	},
+
+	[hash("student")] = {
+		name = "Student",
+		want = "",
+		give = "juice",
+		A = {"Ey Vamp.", "Ah, please, don't talk so loud"}
 	}
 }
 

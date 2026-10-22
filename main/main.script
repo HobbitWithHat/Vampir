@@ -18,13 +18,15 @@ function on_message(self, message_id, message, sender)
 	elseif message_id == hash("load") then
 		local room = "/game#" .. message.room
 		self.current = collectionfactory.create(room)
-		go.set_position(message.position, "/vampire")
+		if message.position then
+			go.set_position(message.position, "/vampire")
+		end
 
-	elseif message_id == hash("cellar")then
+	elseif message_id == hash("switch")then
 		msg.post("/hud#hud", "fade", { out = true })
 		timer.delay(0.5, false, function() 
 			msg.post("#", "unload")
-			msg.post("#", "load", {room = "cellar2", position = vmath.vector3(0, 56, 0.1)})
+			msg.post("#", "load", {room = message.room, position = message.position})
 			msg.post("/hud#hud", "fade", {out=false})
 		end)
 		

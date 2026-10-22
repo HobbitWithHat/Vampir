@@ -56,6 +56,14 @@ instances {
     y: 0.248364
   }
 }
+instances {
+  id: "dumpster"
+  prototype: "/things/interacts/dumpster.go"
+  position {
+    x: 47.96091
+    y: 160.82886
+  }
+}
 scale_along_z: 0
 embedded_instances {
   id: "map"

@@ -10,12 +10,12 @@ end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("interact") then
 		if message.stuff[npc[self.character]["want"]] == true then
-			self.dialog = "B"
+			self.dialog = "B"												-- if player has item, play dialog B
 			if message.stuff[npc[self.character]["give"]] == false then
-				msg.post(sender, "collect", { item = npc[self.character]["give"] })
+				msg.post(sender, "collect", { item = npc[self.character]["give"] })	-- give player Item, if he doesn't have it
 			end
 		else
-			self.dialog = "A"
+			self.dialog = "A"			-- else, if player has not item, play dialog A
 		end
 		
 		if npc[self.character][self.dialog][self.int] then
@@ -25,6 +25,9 @@ function on_message(self, message_id, message, sender)
 			msg.post("/hud#hud", "hide_text")
 			self.int = 1
 			self.dialog = nil
+			if npc[self.character]["give"] == "action_student" then
+				msg.post("/game#main", "switch", {room = "student2", })
+			end
 		end
 	end
 end

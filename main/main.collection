@@ -56,6 +56,12 @@ embedded_instances {
   "  data: \"prototype: \\\"/collections/janitor.collection\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"student2\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/collections/student2.collection\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {

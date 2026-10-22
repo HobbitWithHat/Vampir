@@ -34,6 +34,23 @@ instances {
     z: 0.1
   }
 }
+instances {
+  id: "npc1"
+  prototype: "/things/npc/npc.go"
+  position {
+    x: -81.35933
+    y: -0.45950386
+    z: 0.1
+  }
+  component_properties {
+    id: "npc"
+    properties {
+      id: "character"
+      value: "guy"
+      type: PROPERTY_TYPE_HASH
+    }
+  }
+}
 scale_along_z: 0
 embedded_instances {
   id: "map"
