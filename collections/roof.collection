@@ -1,0 +1,494 @@
+name: "roof"
+instances {
+  id: "transition1"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 8.0
+    y: 12.0
+  }
+}
+instances {
+  id: "transition2"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 8.0
+    y: 29.0
+  }
+}
+instances {
+  id: "transition3"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 8.0
+    y: 46.0
+  }
+}
+instances {
+  id: "transition4"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 8.0
+    y: 63.0
+  }
+}
+instances {
+  id: "transition5"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 8.0
+    y: 79.0
+  }
+}
+instances {
+  id: "transition6"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 8.0
+    y: 95.0
+  }
+}
+instances {
+  id: "transition7"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 8.0
+    y: 111.0
+  }
+}
+instances {
+  id: "transition8"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 8.0
+    y: 127.0
+  }
+}
+instances {
+  id: "transition9"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 8.0
+    y: 143.0
+  }
+}
+instances {
+  id: "transition10"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 8.0
+    y: 159.0
+  }
+}
+instances {
+  id: "transition11"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 248.0
+    y: 12.0
+  }
+}
+instances {
+  id: "transition12"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 248.0
+    y: 159.0
+  }
+}
+instances {
+  id: "transition13"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 248.0
+    y: 127.0
+  }
+}
+instances {
+  id: "transition14"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 248.0
+    y: 63.0
+  }
+}
+instances {
+  id: "transition15"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 248.0
+    y: 29.0
+  }
+}
+instances {
+  id: "transition16"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 248.0
+    y: 79.0
+  }
+}
+instances {
+  id: "transition17"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 248.0
+    y: 111.0
+  }
+}
+instances {
+  id: "transition18"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 248.0
+    y: 95.0
+  }
+}
+instances {
+  id: "transition19"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 248.0
+    y: 143.0
+  }
+}
+instances {
+  id: "transition20"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 248.0
+    y: 46.0
+  }
+}
+instances {
+  id: "transition21"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 8.0
+    y: -4.0
+  }
+}
+instances {
+  id: "transition22"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 24.0
+    y: -4.0
+  }
+}
+instances {
+  id: "transition23"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 40.0
+    y: -4.0
+  }
+}
+instances {
+  id: "transition24"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 56.0
+    y: -4.0
+  }
+}
+instances {
+  id: "transition25"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 72.0
+    y: -4.0
+  }
+}
+instances {
+  id: "transition26"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 88.0
+    y: -4.0
+  }
+}
+instances {
+  id: "transition27"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 104.0
+    y: -4.0
+  }
+}
+instances {
+  id: "transition28"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 121.0
+    y: -4.0
+  }
+}
+instances {
+  id: "transition29"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 138.0
+    y: -4.0
+  }
+}
+instances {
+  id: "transition30"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 155.0
+    y: -4.0
+  }
+}
+instances {
+  id: "transition31"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 171.0
+    y: -4.0
+  }
+}
+instances {
+  id: "transition32"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 187.0
+    y: -4.0
+  }
+}
+instances {
+  id: "transition33"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 203.0
+    y: -4.0
+  }
+}
+instances {
+  id: "transition34"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 219.0
+    y: -4.0
+  }
+}
+instances {
+  id: "transition35"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 235.0
+    y: -4.0
+  }
+}
+instances {
+  id: "transition36"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 252.0
+    y: -4.0
+  }
+}
+instances {
+  id: "transition37"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 252.0
+    y: 167.0
+  }
+}
+instances {
+  id: "transition38"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 187.0
+    y: 167.0
+  }
+}
+instances {
+  id: "transition39"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 155.0
+    y: 167.0
+  }
+}
+instances {
+  id: "transition40"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 219.0
+    y: 167.0
+  }
+}
+instances {
+  id: "transition41"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 8.0
+    y: 167.0
+  }
+}
+instances {
+  id: "transition42"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 121.0
+    y: 167.0
+  }
+}
+instances {
+  id: "transition43"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 24.0
+    y: 167.0
+  }
+}
+instances {
+  id: "transition44"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 88.0
+    y: 167.0
+  }
+}
+instances {
+  id: "transition45"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 72.0
+    y: 167.0
+  }
+}
+instances {
+  id: "transition46"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 203.0
+    y: 167.0
+  }
+}
+instances {
+  id: "transition47"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 235.0
+    y: 167.0
+  }
+}
+instances {
+  id: "transition48"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 138.0
+    y: 167.0
+  }
+}
+instances {
+  id: "transition49"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 171.0
+    y: 167.0
+  }
+}
+instances {
+  id: "transition50"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 40.0
+    y: 167.0
+  }
+}
+instances {
+  id: "transition51"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 104.0
+    y: 167.0
+  }
+}
+instances {
+  id: "transition52"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 56.0
+    y: 167.0
+  }
+}
+scale_along_z: 0
+embedded_instances {
+  id: "map"
+  data: "components {\n"
+  "  id: \"roof\"\n"
+  "  component: \"/maps/roof.tilemap\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"collider\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"/maps/roof.tilemap\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"default\\\"\\n"
+  "mask: \\\"player\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+}
+embedded_instances {
+  id: "transition"
+  children: "transition1"
+  children: "transition10"
+  children: "transition11"
+  children: "transition12"
+  children: "transition13"
+  children: "transition14"
+  children: "transition15"
+  children: "transition16"
+  children: "transition17"
+  children: "transition18"
+  children: "transition19"
+  children: "transition2"
+  children: "transition20"
+  children: "transition21"
+  children: "transition22"
+  children: "transition23"
+  children: "transition24"
+  children: "transition25"
+  children: "transition26"
+  children: "transition27"
+  children: "transition28"
+  children: "transition29"
+  children: "transition3"
+  children: "transition30"
+  children: "transition31"
+  children: "transition32"
+  children: "transition33"
+  children: "transition34"
+  children: "transition35"
+  children: "transition36"
+  children: "transition37"
+  children: "transition38"
+  children: "transition39"
+  children: "transition4"
+  children: "transition40"
+  children: "transition41"
+  children: "transition42"
+  children: "transition43"
+  children: "transition44"
+  children: "transition45"
+  children: "transition46"
+  children: "transition47"
+  children: "transition48"
+  children: "transition49"
+  children: "transition5"
+  children: "transition50"
+  children: "transition51"
+  children: "transition52"
+  children: "transition6"
+  children: "transition7"
+  children: "transition8"
+  children: "transition9"
+  data: ""
+}

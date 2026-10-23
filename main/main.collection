@@ -62,6 +62,12 @@ embedded_instances {
   "  data: \"prototype: \\\"/collections/student2.collection\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"roof\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/collections/roof.collection\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {
