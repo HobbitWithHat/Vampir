@@ -415,6 +415,15 @@ instances {
     y: 167.0
   }
 }
+instances {
+  id: "crow"
+  prototype: "/things/interacts/crow.go"
+  position {
+    x: 215.45
+    y: 46.56041
+    z: 0.1
+  }
+}
 scale_along_z: 0
 embedded_instances {
   id: "map"

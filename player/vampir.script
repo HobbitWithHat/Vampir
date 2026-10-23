@@ -50,7 +50,7 @@ function init(self)
 		number = false,
 		juice = false,
 		doll = false,
-		tantrum = true,
+		tantrum = false,
 		coin = false,
 	}
 

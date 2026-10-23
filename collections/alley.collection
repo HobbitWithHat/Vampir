@@ -13,7 +13,7 @@ instances {
   prototype: "/things/transition/transition.go"
   position {
     x: -6.910829
-    y: 0.248364
+    y: 16.248363
   }
 }
 instances {
@@ -21,7 +21,7 @@ instances {
   prototype: "/things/transition/transition.go"
   position {
     x: 9.089171
-    y: 0.248364
+    y: 16.248363
   }
 }
 instances {
@@ -29,7 +29,7 @@ instances {
   prototype: "/things/transition/transition.go"
   position {
     x: 26.08917
-    y: 0.248364
+    y: 16.248363
   }
 }
 instances {
@@ -37,7 +37,7 @@ instances {
   prototype: "/things/transition/transition.go"
   position {
     x: 297.08917
-    y: 0.248364
+    y: 16.248363
   }
 }
 instances {
@@ -45,7 +45,7 @@ instances {
   prototype: "/things/transition/transition.go"
   position {
     x: 313.08917
-    y: 0.248364
+    y: 16.248363
   }
 }
 instances {
@@ -53,15 +53,16 @@ instances {
   prototype: "/things/transition/transition.go"
   position {
     x: 329.08917
-    y: 0.248364
+    y: 16.248363
   }
 }
 instances {
   id: "dumpster"
   prototype: "/things/interacts/dumpster.go"
   position {
-    x: 47.96091
+    x: -2.039089
     y: 160.82886
+    z: 0.1
   }
 }
 scale_along_z: 0

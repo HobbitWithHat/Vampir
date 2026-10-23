@@ -1,0 +1,35 @@
+function init(self)
+	sprite.play_flipbook("#sprite", "nest")
+
+	self.text = false
+end
+
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("interact") then
+		if message.stuff["coin"] then
+			if self.text then
+				msg.post("/hud#hud", "hide_text")
+				self.text = false
+			else
+				msg.post("/hud#hud", "show_text", { text = "What a nice birb. I should leave him alone. I feel sorry that I took his coin."})
+				self.text = true
+			end
+
+		else
+			if self.text then
+				msg.post("/hud#hud", "hide_text")
+				self.text = false
+			else
+				msg.post("/hud#hud", "show_text", { text = "There are a few coins in this crow's nest. Perfect for a vending machine."})
+				msg.post(sender, "collect", {item = "coin"})
+				self.text = true
+			end
+		end
+	elseif message_id == hash("trigger_response") then
+		if message.enter == false then
+			msg.post("/hud#hud", "hide_text")
+			self.text = false
+		end
+	end
+end

@@ -42,7 +42,7 @@ function on_input(self, action_id, action)
 			msg.post("/game#main", "load", {room = "girl", position = vmath.vector3(50, 60, 0.1)})
 			close(self)		
 		elseif gui.pick_node(self.alley, action.x, action.y) and action.pressed then
-			msg.post("/game#main", "load", {room = "alley", position = vmath.vector3(8, 22, 0.1)})
+			msg.post("/game#main", "load", {room = "alley", position = vmath.vector3(8, 40, 0.1)})
 			close(self)
 		elseif gui.pick_node(self.student, action.x, action.y) and action.pressed then
 			msg.post("/game#main", "load", {room = "student", position = vmath.vector3(-50, 16, 0.1)})

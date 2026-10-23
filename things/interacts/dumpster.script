@@ -1,8 +1,8 @@
 function init(self)
-	sprite.play_flipbook("#sprite_tl", "vend_1")
-	sprite.play_flipbook("#sprite_tr", "vend_2")
-	sprite.play_flipbook("#sprite_bl", "vend_3")
-	sprite.play_flipbook("#sprite_br", "vend_4")
+	sprite.play_flipbook("#sprite_1", "dumpster_1")
+	sprite.play_flipbook("#sprite_2", "dumpster_2")
+	sprite.play_flipbook("#sprite_3", "dumpster_3")
+	sprite.play_flipbook("#sprite_4", "dumpster_4")
 
 	self.text = false
 	self.line = 1

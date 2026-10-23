@@ -3,13 +3,13 @@ components {
   component: "/things/interacts/dumpster.script"
 }
 embedded_components {
-  id: "sprite_tl"
+  id: "sprite_1"
   type: "sprite"
-  data: "default_animation: \"vend_1\"\n"
+  data: "default_animation: \"dumpster_1\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "textures {\n"
   "  sampler: \"texture_sampler\"\n"
-  "  texture: \"/graphics/interior.tilesource\"\n"
+  "  texture: \"/graphics/city.tilesource\"\n"
   "}\n"
   ""
   position {
@@ -18,9 +18,9 @@ embedded_components {
   }
 }
 embedded_components {
-  id: "sprite_tr"
+  id: "sprite_2"
   type: "sprite"
-  data: "default_animation: \"vend_2\"\n"
+  data: "default_animation: \"dumpster_2\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "size {\n"
   "  x: 16.0\n"
@@ -28,7 +28,7 @@ embedded_components {
   "}\n"
   "textures {\n"
   "  sampler: \"texture_sampler\"\n"
-  "  texture: \"/graphics/interior.tilesource\"\n"
+  "  texture: \"/graphics/city.tilesource\"\n"
   "}\n"
   ""
   position {
@@ -37,9 +37,9 @@ embedded_components {
   }
 }
 embedded_components {
-  id: "sprite_bl"
+  id: "sprite_3"
   type: "sprite"
-  data: "default_animation: \"vend_3\"\n"
+  data: "default_animation: \"dumpster_3\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "size {\n"
   "  x: 16.0\n"
@@ -47,7 +47,7 @@ embedded_components {
   "}\n"
   "textures {\n"
   "  sampler: \"texture_sampler\"\n"
-  "  texture: \"/graphics/interior.tilesource\"\n"
+  "  texture: \"/graphics/city.tilesource\"\n"
   "}\n"
   ""
   position {
@@ -56,9 +56,9 @@ embedded_components {
   }
 }
 embedded_components {
-  id: "sprite_br"
+  id: "sprite_4"
   type: "sprite"
-  data: "default_animation: \"vend_4\"\n"
+  data: "default_animation: \"dumpster_4\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "size {\n"
   "  x: 16.0\n"
@@ -66,7 +66,7 @@ embedded_components {
   "}\n"
   "textures {\n"
   "  sampler: \"texture_sampler\"\n"
-  "  texture: \"/graphics/interior.tilesource\"\n"
+  "  texture: \"/graphics/city.tilesource\"\n"
   "}\n"
   ""
   position {
@@ -87,7 +87,8 @@ embedded_components {
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"
   "    position {\n"
-  "      y: -12.0\n"
+  "      x: 8.0\n"
+  "      y: -3.0\n"
   "    }\n"
   "    rotation {\n"
   "    }\n"
@@ -95,7 +96,7 @@ embedded_components {
   "    count: 3\n"
   "  }\n"
   "  data: 10.0\n"
-  "  data: 10.0\n"
+  "  data: 12.0\n"
   "  data: 10.0\n"
   "}\n"
   ""
@@ -113,14 +114,15 @@ embedded_components {
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"
   "    position {\n"
+  "      x: -3.0\n"
   "    }\n"
   "    rotation {\n"
   "    }\n"
   "    index: 0\n"
   "    count: 3\n"
   "  }\n"
-  "  data: 16.4\n"
-  "  data: 10.0\n"
+  "  data: 12.799999\n"
+  "  data: 14.8\n"
   "  data: 10.0\n"
   "}\n"
   ""
