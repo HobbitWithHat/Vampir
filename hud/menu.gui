@@ -16,6 +16,7 @@ nodes {
   texture: "main/background"
   id: "background"
   inherit_alpha: true
+  alpha: 0.0
   size_mode: SIZE_MODE_AUTO
 }
 nodes {
