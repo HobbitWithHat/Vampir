@@ -27,6 +27,8 @@ function on_message(self, message_id, message, sender)
 			self.dialog = nil
 			if npc[self.character]["give"] == "action_student" then
 				msg.post("/game#main", "switch", {room = "student2", })
+			elseif npc[self.character]["give"] == nil then
+				msg.post("/game#main", "end")
 			end
 		end
 	end

@@ -30,7 +30,9 @@ function on_message(self, message_id, message, sender)
 			msg.post("/hud#hud", "fade", {out=false})
 		end)
 		
-		
+	elseif message_id == hash("end") then
+		msg.post("/hud#hud", "fade", { out = true })
+		msg.post("/hud#hud", "show_text", {speaker = "Narrator", text = "You finally found your friend. Now you can have a nice talk and catch up. Good Job!"})
 		
 	end
 end

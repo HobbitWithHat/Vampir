@@ -18,6 +18,9 @@ nodes {
   size_mode: SIZE_MODE_AUTO
 }
 nodes {
+  position {
+    z: 0.2
+  }
   size {
     x: 200.0
     y: 100.0
@@ -46,7 +49,7 @@ nodes {
   font: "always_on_top"
   id: "textbox_text"
   line_break: true
-  parent: "textbox_background"
+  parent: "textbox_border"
   inherit_alpha: true
 }
 nodes {
@@ -66,13 +69,14 @@ nodes {
   text: "Speaker"
   font: "always_on_top"
   id: "speaker_text"
-  parent: "textbox_background"
+  parent: "textbox_border"
   inherit_alpha: true
 }
 nodes {
   position {
     x: 640.0
     y: 360.0
+    z: 0.1
   }
   size {
     x: 1280.0

@@ -43,11 +43,11 @@ function init(self)
 
 	-- sammelbare Items und Stats
 	self.stuff = {
-		info = false,
+		info = true,
 		coffee = false,
 		cologne = false,
 		key = false,
-		number = false,
+		book = false,
 		juice = false,
 		doll = false,
 		tantrum = false,

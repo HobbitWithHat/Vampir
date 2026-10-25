@@ -65,9 +65,12 @@ M = {
 
 	[hash("student")] = {
 		name = "Student",
-		want = "",
+		want = "book",
 		give = "juice",
-		A = {"Ey Vamp.", "Ah, please, don't talk so loud"}
+		A = {"Ey Vamp.", "Ah, please, don't talk so loud", "What? No, we did'nt drink, we had a late... study sessiomn.",
+			"Or we would have, but some do-no-good misappropriated my book.", "Please, if you could find it, I need it for the exam."},
+		B = {"My Book!", "You are the best, Vamp!", "Here, I still have some blood-orange-juice from yesterday.",
+			"I know you don't drink (much appreciated by the way), so this should be something good."}
 	}
 }
 
