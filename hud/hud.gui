@@ -7,6 +7,7 @@ nodes {
   position {
     x: 640.0
     y: 130.0
+    z: 0.2
   }
   size {
     x: 666.0
@@ -14,13 +15,11 @@ nodes {
   }
   type: TYPE_BOX
   id: "textbox_background"
+  layer: "l_text"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
 nodes {
-  position {
-    z: 0.2
-  }
   size {
     x: 200.0
     y: 100.0
@@ -89,9 +88,16 @@ nodes {
   }
   type: TYPE_BOX
   id: "fog"
+  layer: "l_fog"
   inherit_alpha: true
   alpha: 0.0
   size_mode: SIZE_MODE_AUTO
+}
+layers {
+  name: "l_fog"
+}
+layers {
+  name: "l_text"
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

@@ -1,7 +1,12 @@
 function init(self)
-	self.current = collectionfactory.create("/game#cafe", vmath.vector3(0, 0, 0))
-	self.menu = nil
-	print(self.current)
+	msg.post("/hud#hud", "show_text", {speaker = "Narrator", text = "You have a date with an old friend. Sadly, since you are ovber 500 years old, you've forgotten how they look like. You need to find out."})
+	timer.delay(8, false, function() 
+		self.current = collectionfactory.create("/game#cafe", vmath.vector3(0, 0, 0))
+		self.menu = nil
+		msg.post("/hud#hud", "hide_text")
+		msg.post("/hud#hud", "fade", {out = false})
+	end)
+
 end
 
 
@@ -31,8 +36,10 @@ function on_message(self, message_id, message, sender)
 		end)
 		
 	elseif message_id == hash("end") then
+		msg.post("/vampire", "disable")
 		msg.post("/hud#hud", "fade", { out = true })
 		msg.post("/hud#hud", "show_text", {speaker = "Narrator", text = "You finally found your friend. Now you can have a nice talk and catch up. Good Job!"})
+		timer.delay(8, false, function() msg.post("@system:", "exit", {code = 0}) end)
 		
 	end
 end
