@@ -2395,7 +2395,7 @@ convex_hulls {
 convex_hulls {
   index: 2220
   count: 7
-  collision_group: "world"
+  collision_group: ""
 }
 convex_hulls {
   index: 2227
@@ -16803,6 +16803,13 @@ convex_hulls {
   collision_group: ""
 }
 collision_groups: "world"
+animations {
+  id: "book"
+  start_tile: 523
+  end_tile: 523
+  playback: PLAYBACK_NONE
+  fps: 0
+}
 animations {
   id: "cdoor_c1"
   start_tile: 917

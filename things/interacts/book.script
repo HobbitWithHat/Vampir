@@ -1,0 +1,26 @@
+function init(self)
+	sprite.play_flipbook("#sprite", "book")
+
+	self.text = false
+end
+
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("interact") then
+		if self.text then
+			msg.post("/hud#hud", "hide_text")
+			self.text = false
+			go.delete(".")
+		else
+			msg.post("/hud#hud", "show_text", {speaker = "Vampir", text = "A tome of magic. The student version."})
+			msg.post(sender, "collect", {item = "book"})
+			self.text = true
+		end
+
+	elseif message_id == hash("trigger_response") then
+		if message.enter == false then
+			msg.post("/hud#hud", "hide_text")
+			self.text = false
+		end
+	end
+end

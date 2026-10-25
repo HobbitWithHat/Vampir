@@ -26,6 +26,15 @@ instances {
     z: 0.1
   }
 }
+instances {
+  id: "book"
+  prototype: "/things/interacts/book.go"
+  position {
+    x: -57.58231
+    y: 38.43963
+    z: 0.1
+  }
+}
 scale_along_z: 0
 embedded_instances {
   id: "map"
