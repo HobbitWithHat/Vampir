@@ -29,9 +29,12 @@ nodes {
   size_mode: SIZE_MODE_AUTO
 }
 nodes {
+  position {
+    y: -10.0
+  }
   size {
     x: 650.0
-    y: 100.0
+    y: 80.0
   }
   color {
     x: 0.6
@@ -43,6 +46,26 @@ nodes {
   font: "always_on_top"
   id: "textbox_text"
   line_break: true
+  parent: "textbox_background"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    y: 42.0
+  }
+  size {
+    x: 200.0
+    y: 20.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "Speaker"
+  font: "always_on_top"
+  id: "speaker_text"
   parent: "textbox_background"
   inherit_alpha: true
 }

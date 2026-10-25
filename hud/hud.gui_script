@@ -3,10 +3,12 @@ function init(self)
 	self.border = gui.get_node("textbox_border")
 	self.text = gui.get_node("textbox_text")
 	self.fog = gui.get_node("fog")
+	self.speaker = gui.get_node("speaker_text")
 
 	gui.set_visible(self.background, false)
 	gui.set_visible(self.border, false)
 	gui.set_visible(self.text, false)
+	gui.set_visible(self.speaker, false)
 end
 
 
@@ -25,14 +27,17 @@ end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("show_text") then
 		gui.set_text(self.text, message.text)
+		gui.set_text(self.speaker, message.speaker)
 		gui.set_visible(self.background, true)
 		gui.set_visible(self.border, true)
 		gui.set_visible(self.text, true)
+		gui.set_visible(self.speaker, true)
 
 	elseif message_id == hash("hide_text") then
 		gui.set_visible(self.background, false)
 		gui.set_visible(self.border, false)
 		gui.set_visible(self.text, false)
+		gui.set_visible(self.speaker, false)
 
 	elseif message_id == hash("fade") then
 		if message.out then

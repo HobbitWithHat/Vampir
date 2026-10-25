@@ -12,7 +12,7 @@ function on_message(self, message_id, message, sender)
 				msg.post("/hud#hud", "hide_text")
 				self.text = false
 			else
-				msg.post("/hud#hud", "show_text", { text = "What a nice birb. I should leave him alone. I feel sorry that I took his coin."})
+				msg.post("/hud#hud", "show_text", {speaker = "Vampir", text = "What a nice birb. I should leave him alone. I feel sorry that I took his coin."})
 				self.text = true
 			end
 
@@ -21,7 +21,7 @@ function on_message(self, message_id, message, sender)
 				msg.post("/hud#hud", "hide_text")
 				self.text = false
 			else
-				msg.post("/hud#hud", "show_text", { text = "There are a few coins in this crow's nest. Perfect for a vending machine."})
+				msg.post("/hud#hud", "show_text", {speaker = "Vampir", text = "There are a few coins in this crow's nest. Perfect for a vending machine."})
 				msg.post(sender, "collect", {item = "coin"})
 				self.text = true
 			end

@@ -28,7 +28,7 @@ function on_message(self, message_id, message, sender)
 				self.text=false
 			else
 				local number = math.random(5)
-				msg.post("/hud#hud", "show_text", { text = self.joke[self.line]})
+				msg.post("/hud#hud", "show_text", {speaker = "Vampir", text = self.joke[self.line]})
 				self.text = true
 				if self.line < 5 then
 					self.line = self.line+1
@@ -40,7 +40,7 @@ function on_message(self, message_id, message, sender)
 				msg.post("/hud#hud", "hide_text")
 				self.text = false
 			else
-				msg.post("/hud#hud", "show_text", { text = ("Someone threw away a little doll. How sad, I should rescue it.")})
+				msg.post("/hud#hud", "show_text", {speaker = "Vampir", text = ("Someone threw away a little doll. How sad, I should rescue it.")})
 				msg.post(sender, "collect", {item = "doll"})
 				self.text = true
 			end

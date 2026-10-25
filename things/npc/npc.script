@@ -19,7 +19,7 @@ function on_message(self, message_id, message, sender)
 		end
 		
 		if npc[self.character][self.dialog][self.int] then
-			msg.post("/hud#hud", "show_text", {text = npc[self.character][self.dialog][self.int]})
+			msg.post("/hud#hud", "show_text", {text = npc[self.character][self.dialog][self.int], speaker = npc[self.character]["name"]})
 			self.int = self.int+1
 		else
 			msg.post("/hud#hud", "hide_text")

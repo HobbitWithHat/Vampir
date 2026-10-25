@@ -34,7 +34,7 @@ function on_message(self, message_id, message, sender)
 					msg.post("/hud#hud", "hide_text")
 					self.text = false
 				else						-- if no text, then show text
-					msg.post("/hud#hud", "show_text", { text = ("It's locked. I need the cellar key")})
+					msg.post("/hud#hud", "show_text", {speaker = "Vampir", text = ("It's locked. I need the cellar key")})
 					self.text = true
 				end
 			end
