@@ -3,6 +3,7 @@ local M = {}
 M = {
 	[hash("stranger")] = {
 		name = "Stranger",
+		sprite = "stranger",
 		want = "info",
 		give = nil,
 		A = {"It's rude to talk to strangers."},
@@ -11,6 +12,7 @@ M = {
 
 	[hash("cafe")] = {
 		name = "Barista",
+		sprite = "barista",
 		want = "coffee",
 		give = "info",
 		A = {"Oh, the vampire. Whazzup?", "Hope nothing sucks, hehe", "Yeah, I'm sorry.", 
@@ -23,6 +25,7 @@ M = {
 
 	[hash("cellar")] = {
 		name = "Basementperson",
+		sprite = "basement",
 		want = "cologne",
 		give = "coffee",
 		A = {"Hhhhhhhhhhh", "Who visits the one who dwells in the cellar?", 
@@ -35,6 +38,7 @@ M = {
 
 	[hash("girl")] = {
 		name = "Girl",
+		sprite = "girl",
 		want = "doll",
 		give = "cologne",
 		A = {"Oh hey Mr. Vampire. have you found my doll?", "Aww, but I told you about it!",
@@ -45,6 +49,7 @@ M = {
 
 	[hash("guy")] = {
 		name = "Guy",
+		sprite = "guy",
 		want = "tantrum",
 		give = "action_student",
 		A = {"Eyyy, man...", "Whaddyadoere... lemmesleeb", "**he needs something strong to wake up**"},
@@ -53,6 +58,7 @@ M = {
 
 	[hash("janitor")] = {
 		name = "Janitor",
+		sprite = "janitor",
 		want = "juice",
 		give = "key",
 		A = {"Good day, Vampire-Sir, How can this humble Janitor serve you?", "You need the keys for the basement?",
@@ -65,6 +71,7 @@ M = {
 
 	[hash("student")] = {
 		name = "Student",
+		sprite = "student",
 		want = "book",
 		give = "juice",
 		A = {"Ey Vamp.", "Ah, please, don't talk so loud", "What? No, we did'nt drink, we had a late... study sessiomn.",

@@ -5,13 +5,16 @@ components {
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "default_animation: \"10\"\n"
+  data: "default_animation: \"stranger\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "textures {\n"
   "  sampler: \"texture_sampler\"\n"
-  "  texture: \"/graphics/protonpc.tilesource\"\n"
+  "  texture: \"/graphics/npc.tilesource\"\n"
   "}\n"
   ""
+  position {
+    y: 8.0
+  }
 }
 embedded_components {
   id: "collider"

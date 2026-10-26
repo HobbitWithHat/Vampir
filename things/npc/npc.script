@@ -4,6 +4,7 @@ local npc = require("things.npc.characters")
 function init(self)
 	self.int = 1
 	self.dialog = nil
+	sprite.play_flipbook("#sprite", npc[self.character]["sprite"])
 end
 
 
@@ -27,7 +28,7 @@ function on_message(self, message_id, message, sender)
 			self.dialog = nil
 			if npc[self.character]["give"] == "action_student" then
 				msg.post("/game#main", "switch", {room = "student2", })
-			elseif npc[self.character]["give"] == nil then
+			elseif npc[self.character]["give"] == nil and self.dialog == "B" then
 				msg.post("/game#main", "end")
 			end
 		end
