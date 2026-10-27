@@ -829,8 +829,8 @@ layers {
   }
 }
 layers {
-  id: "furniture1"
-  z: 0.0
+  id: "backchairs"
+  z: 0.1
   cell {
     x: 1
     y: -2
@@ -851,6 +851,75 @@ layers {
     y: -1
     tile: 1254
   }
+  cell {
+    x: 5
+    y: 3
+    tile: 2979
+  }
+  cell {
+    x: 6
+    y: 3
+    tile: 2980
+  }
+  cell {
+    x: 7
+    y: 3
+    tile: 2981
+  }
+  cell {
+    x: 9
+    y: 3
+    tile: 1302
+  }
+  cell {
+    x: 11
+    y: 3
+    tile: 1494
+  }
+  cell {
+    x: 5
+    y: 4
+    tile: 2931
+  }
+  cell {
+    x: 6
+    y: 4
+    tile: 2932
+  }
+  cell {
+    x: 7
+    y: 4
+    tile: 2933
+  }
+  cell {
+    x: 9
+    y: 4
+    tile: 1254
+  }
+  cell {
+    x: 11
+    y: 4
+    tile: 1446
+  }
+  cell {
+    x: 5
+    y: 5
+    tile: 2883
+  }
+  cell {
+    x: 6
+    y: 5
+    tile: 2884
+  }
+  cell {
+    x: 7
+    y: 5
+    tile: 2885
+  }
+}
+layers {
+  id: "counter"
+  z: 0.2
   cell {
     x: 0
     y: 1
@@ -946,30 +1015,10 @@ layers {
     y: 3
     tile: 1652
   }
-  cell {
-    x: 9
-    y: 3
-    tile: 1302
-  }
-  cell {
-    x: 11
-    y: 3
-    tile: 1494
-  }
-  cell {
-    x: 9
-    y: 4
-    tile: 1254
-  }
-  cell {
-    x: 11
-    y: 4
-    tile: 1446
-  }
 }
 layers {
-  id: "furniture2"
-  z: 0.0
+  id: "table+side"
+  z: 0.3
   cell {
     x: 0
     y: -3
@@ -1082,8 +1131,8 @@ layers {
   }
 }
 layers {
-  id: "furniture3"
-  z: 0.0
+  id: "frontchairs"
+  z: 0.4
   cell {
     x: 9
     y: 1
@@ -1107,41 +1156,11 @@ layers {
 }
 layers {
   id: "deco"
-  z: 0.0
+  z: 0.5
   cell {
     x: -3
     y: 2
     tile: 37
-  }
-  cell {
-    x: 5
-    y: 3
-    tile: 2979
-  }
-  cell {
-    x: 6
-    y: 3
-    tile: 2980
-  }
-  cell {
-    x: 7
-    y: 3
-    tile: 2981
-  }
-  cell {
-    x: 5
-    y: 4
-    tile: 2931
-  }
-  cell {
-    x: 6
-    y: 4
-    tile: 2932
-  }
-  cell {
-    x: 7
-    y: 4
-    tile: 2933
   }
   cell {
     x: -4
@@ -1152,21 +1171,6 @@ layers {
     x: 1
     y: 5
     tile: 325
-  }
-  cell {
-    x: 5
-    y: 5
-    tile: 2883
-  }
-  cell {
-    x: 6
-    y: 5
-    tile: 2884
-  }
-  cell {
-    x: 7
-    y: 5
-    tile: 2885
   }
   cell {
     x: 8
