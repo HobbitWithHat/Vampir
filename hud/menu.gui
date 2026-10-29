@@ -13,7 +13,7 @@ nodes {
     y: 360.0
   }
   type: TYPE_BOX
-  texture: "main/background"
+  texture: "main/menu"
   id: "background"
   inherit_alpha: true
   alpha: 0.0
