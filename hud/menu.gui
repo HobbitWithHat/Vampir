@@ -16,13 +16,12 @@ nodes {
   texture: "main/menu"
   id: "background"
   inherit_alpha: true
-  alpha: 0.0
   size_mode: SIZE_MODE_AUTO
 }
 nodes {
   position {
-    x: -366.0
-    y: -240.0
+    x: 147.0
+    y: -266.0
   }
   type: TYPE_BOX
   texture: "main/logo"
@@ -53,7 +52,8 @@ nodes {
 }
 nodes {
   position {
-    y: -226.0
+    x: 320.0
+    y: -266.0
   }
   type: TYPE_BOX
   texture: "main/logo"
@@ -84,8 +84,8 @@ nodes {
 }
 nodes {
   position {
-    x: 315.0
-    y: -240.0
+    x: 535.0
+    y: 44.0
   }
   type: TYPE_BOX
   texture: "main/logo"
@@ -116,8 +116,8 @@ nodes {
 }
 nodes {
   position {
-    x: 315.0
-    y: -3.0
+    x: -125.0
+    y: -251.0
   }
   type: TYPE_BOX
   texture: "main/logo"
@@ -149,7 +149,7 @@ nodes {
 nodes {
   position {
     x: 7.0
-    y: -3.0
+    y: 114.0
   }
   type: TYPE_BOX
   texture: "main/logo"
@@ -180,8 +180,8 @@ nodes {
 }
 nodes {
   position {
-    x: -363.0
-    y: -3.0
+    x: 235.0
+    y: 44.0
   }
   type: TYPE_BOX
   texture: "main/logo"
@@ -212,8 +212,8 @@ nodes {
 }
 nodes {
   position {
-    x: 23.0
-    y: 254.0
+    x: 221.0
+    y: 270.0
   }
   type: TYPE_BOX
   texture: "main/logo"
