@@ -23,7 +23,7 @@ function on_message(self, message_id, message, sender)
 		
 		-- start timer (1s, until animation end)
 		-- Call a simple function to post messages, after timer is done
-		timer.delay(1, false, function() 
+		timer.delay(1.5, false, function() 
 			msg.post("/vampire", "disable")
 			msg.post("/game#main", "unload") 
 								end)

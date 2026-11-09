@@ -1,6 +1,7 @@
 local function start(self)
 	self.current = collectionfactory.create("/game#cafe", vmath.vector3(0, 0, 0))
 	self.menu = nil
+	print(self.current["/map"])
 	msg.post("/hud#hud", "hide_text")
 	msg.post("/hud#hud", "hide_hint")
 	msg.post("/hud#hud", "fade", {out = false})
