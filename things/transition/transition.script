@@ -4,7 +4,7 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("trigger_response") and self.transition == false then
-		msg.post("/menu#menu", "transition")
+		msg.post("/game#main", "transition")
 		self.transition = true
 	end
 end

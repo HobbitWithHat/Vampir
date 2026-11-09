@@ -68,6 +68,12 @@ embedded_instances {
   "  data: \"prototype: \\\"/collections/roof.collection\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"fly\"\n"
+  "  type: \"sound\"\n"
+  "  data: \"sound: \\\"/assets/sound/bat wing 2.wav\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {

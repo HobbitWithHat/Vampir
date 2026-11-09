@@ -35,6 +35,10 @@ function on_message(self, message_id, message, sender)
 			go.set_position(message.position, "/vampire")
 		end
 
+	elseif message_id == hash("transition") then
+		msg.post("/menu#menu", "transition")
+		sound.play("/game#fly")
+
 	elseif message_id == hash("switch")then
 		msg.post("/hud#hud", "fade", { out = true })
 		timer.delay(0.5, false, function() 
