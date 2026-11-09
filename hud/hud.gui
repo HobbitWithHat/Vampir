@@ -10,7 +10,7 @@ textures {
 nodes {
   position {
     x: 640.0
-    y: 130.0
+    y: 80.0
     z: 0.2
   }
   size {
@@ -110,7 +110,46 @@ nodes {
   texture: "main/frame"
   id: "frame"
   inherit_alpha: true
+  alpha: 0.0
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 640.0
+    y: 200.0
+  }
+  size {
+    x: 128.0
+    y: 72.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "hint"
+  inherit_alpha: true
+  alpha: 0.75
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  size {
+    x: 70.0
+    y: 72.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "E to interact"
+  font: "always_on_top"
+  id: "hint_text"
+  line_break: true
+  parent: "hint"
+  inherit_alpha: true
 }
 layers {
   name: "l_fog"

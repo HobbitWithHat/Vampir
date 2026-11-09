@@ -1,14 +1,22 @@
-function init(self)
-	msg.post("/hud#hud", "show_text", {speaker = "Narrator", text = "You have a date with an old friend. Sadly, since you are ovber 500 years old, you've forgotten how they look like. You need to find out."})
-	timer.delay(8, false, function() 
-		self.current = collectionfactory.create("/game#cafe", vmath.vector3(0, 0, 0))
-		self.menu = nil
-		msg.post("/hud#hud", "hide_text")
-		msg.post("/hud#hud", "fade", {out = false})
-	end)
-
+local function start(self)
+	self.current = collectionfactory.create("/game#cafe", vmath.vector3(0, 0, 0))
+	self.menu = nil
+	msg.post("/hud#hud", "hide_text")
+	msg.post("/hud#hud", "hide_hint")
+	msg.post("/hud#hud", "fade", {out = false})
+	msg.post(".", "release_input_focus")
 end
 
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	msg.post("/hud#hud", "show_text", {speaker = "Narrator", text = "You have a date with an old friend. Sadly, since you are ovber 500 years old, you've forgotten how they look like. You need to find out."})
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("interact") then
+		start(self)
+	end
+end
 
 
 function on_message(self, message_id, message, sender)

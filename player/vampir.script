@@ -133,8 +133,10 @@ function on_message(self, message_id, message, sender)
 	elseif message_id == hash("trigger_response") then
 		if message.enter then
 			self.object = message.other_id
+			msg.post("/hud#hud", "show_hint")
 		else
 			self.object = nil
+			msg.post("/hud#hud", "hide_hint")
 		end	
 
 	elseif message_id == hash("collect") then

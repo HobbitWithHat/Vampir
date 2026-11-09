@@ -4,6 +4,8 @@ function init(self)
 	self.text = gui.get_node("textbox_text")
 	self.fog = gui.get_node("fog")
 	self.speaker = gui.get_node("speaker_text")
+	self.hint = gui.get_node("hint")
+	self.hinttext = gui.get_node("hint_text")
 
 	gui.set_visible(self.background, false)
 	gui.set_visible(self.border, false)
@@ -28,6 +30,14 @@ function on_message(self, message_id, message, sender)
 		gui.set_visible(self.border, false)
 		gui.set_visible(self.text, false)
 		gui.set_visible(self.speaker, false)
+
+	elseif message_id == hash("show_hint") then
+		gui.set_visible(self.hint, true)
+		gui.set_visible(self.hinttext, true)
+
+	elseif message_id == hash("hide_hint") then
+		gui.set_visible(self.hint, false)
+		gui.set_visible(self.hinttext, false)
 
 	elseif message_id == hash("fade") then
 		if message.out then
