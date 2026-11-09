@@ -7,4 +7,7 @@ images {
 images {
   image: "/builtins/graphics/particle_blob.png"
 }
+images {
+  image: "/assets/images/frame.png"
+}
 extrude_borders: 2

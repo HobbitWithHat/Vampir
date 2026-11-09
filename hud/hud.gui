@@ -3,6 +3,10 @@ fonts {
   name: "always_on_top"
   font: "/builtins/fonts/debug/always_on_top.font"
 }
+textures {
+  name: "main"
+  texture: "/graphics/main.atlas"
+}
 nodes {
   position {
     x: 640.0
@@ -91,6 +95,21 @@ nodes {
   layer: "l_fog"
   inherit_alpha: true
   alpha: 0.0
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 640.0
+    y: 360.0
+  }
+  scale {
+    x: 1.2
+    y: 1.2
+  }
+  type: TYPE_BOX
+  texture: "main/frame"
+  id: "frame"
+  inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
 layers {
