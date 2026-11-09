@@ -1,9 +1,10 @@
 function init(self)
-	sound.play("#bgm")
+	sound.play("#bgm", { gain = 1.0 })
 end
 
 function final(self)
-	sound.stop("#bgm")
+	go.animate("#bgm", "gain", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 2)
+	--sound.stop("#bgm")
 end
 
 function update(self, dt)
