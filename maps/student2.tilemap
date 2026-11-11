@@ -1057,22 +1057,42 @@ layers {
     tile: 373
   }
   cell {
-    x: -4
+    x: -6
     y: 4
     tile: 925
   }
   cell {
-    x: -3
+    x: -5
     y: 4
     tile: 926
   }
   cell {
-    x: -4
+    x: -2
+    y: 4
+    tile: 925
+  }
+  cell {
+    x: -1
+    y: 4
+    tile: 926
+  }
+  cell {
+    x: -6
     y: 5
     tile: 877
   }
   cell {
-    x: -3
+    x: -5
+    y: 5
+    tile: 878
+  }
+  cell {
+    x: -2
+    y: 5
+    tile: 877
+  }
+  cell {
+    x: -1
     y: 5
     tile: 878
   }
@@ -1181,14 +1201,9 @@ layers {
   id: "furniture"
   z: 0.0
   cell {
-    x: -5
-    y: 2
-    tile: 1132
-  }
-  cell {
     x: -4
     y: 2
-    tile: 1132
+    tile: 1271
   }
   cell {
     x: -3
@@ -1198,17 +1213,17 @@ layers {
   cell {
     x: -2
     y: 2
-    tile: 1271
+    tile: 1132
   }
   cell {
-    x: -5
-    y: 3
-    tile: 1084
+    x: -1
+    y: 2
+    tile: 1132
   }
   cell {
     x: -4
     y: 3
-    tile: 1084
+    tile: 1223
   }
   cell {
     x: -3
@@ -1218,7 +1233,12 @@ layers {
   cell {
     x: -2
     y: 3
-    tile: 1223
+    tile: 1084
+  }
+  cell {
+    x: -1
+    y: 3
+    tile: 1084
   }
   cell {
     x: 0
@@ -1415,7 +1435,7 @@ layers {
     tile: 1662
   }
   cell {
-    x: -5
+    x: -2
     y: 3
     tile: 1175
   }

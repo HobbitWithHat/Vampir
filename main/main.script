@@ -8,13 +8,25 @@ local function start(self)
 end
 
 function init(self)
+	self.gameover = false
+	
+	self.complete = {		-- table to track one-time tasks in rooms
+		student = false,	-- will be used to save progress in rooms
+		cafe = false,
+		basement = false,
+	}
+	
 	msg.post(".", "acquire_input_focus")
 	msg.post("/hud#hud", "show_text", {speaker = "Narrator", text = "You have a date with an old friend. Sadly, since you are ovber 500 years old, you've forgotten how they look like. You need to find out."})
 end
 
 function on_input(self, action_id, action)
 	if action_id == hash("interact") then
-		start(self)
+		if self.gameover then
+			msg.post("@system:", "exit", {code = 0})
+		else
+			start(self)
+		end
 	end
 end
 
@@ -54,13 +66,22 @@ function on_message(self, message_id, message, sender)
 			msg.post("#", "unload")
 			msg.post("#", "load", {room = message.room, position = message.position})
 			msg.post("/hud#hud", "fade", {out=false})
+			msg.post("/vampire", "clear_object")
 		end)
+
+	elseif message_id == hash("level_clear") then
+		self.complete[message.level] = true
+		print(message.level .. " complete")
+		print(self.complete[message.level])
 		
 	elseif message_id == hash("end") then
+		self.gameover = true
 		msg.post("/vampire", "disable")
 		msg.post("/hud#hud", "fade", { out = true })
 		msg.post("/hud#hud", "show_text", {speaker = "Narrator", text = "You finally found your friend. Now you can have a nice talk and catch up. Good Job!"})
-		timer.delay(8, false, function() msg.post("@system:", "exit", {code = 0}) end)
+		msg.post("/hud#hud", "show_hint")
+		timer.delay(1, false, function() 
+			msg.post(".", "acquire_input_focus") end)
 		
 	end
 end

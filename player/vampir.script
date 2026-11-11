@@ -43,14 +43,14 @@ function init(self)
 
 	-- sammelbare Items und Stats
 	self.stuff = {
-		info = false,
+		info = true,
 		coffee = false,
 		cologne = false,
 		key = false,
 		book = false,
 		juice = false,
 		doll = false,
-		tantrum = false,
+		tantrum = true,
 		coin = false,
 	}
 
@@ -142,7 +142,9 @@ function on_message(self, message_id, message, sender)
 	elseif message_id == hash("collect") then
 		self.stuff[message.item] = true
 
-	
+	elseif message_id == hash("clear_object") then
+		self.object = nil
+		msg.post("/hud#hud", "hide_hint")
 	end
 end
 

@@ -5,7 +5,7 @@ M = {
 		name = "Stranger",
 		sprite = "stranger",
 		want = "info",
-		give = nil,
+		give = "action_end",
 		A = {"It's rude to talk to strangers."},
 		B = {"Oh hey, it's you.", "I wondered where you been"},
 	},

@@ -20,8 +20,8 @@ instances {
   id: "transition"
   prototype: "/things/transition/transition.go"
   position {
-    x: -48.464314
-    y: 36.301376
+    x: -79.46432
+    y: 49.301376
     z: 0.1
   }
 }
@@ -41,6 +41,10 @@ embedded_instances {
   "  id: \"student2\"\n"
   "  component: \"/maps/student2.tilemap\"\n"
   "}\n"
+  "components {\n"
+  "  id: \"level\"\n"
+  "  component: \"/main/level.script\"\n"
+  "}\n"
   "embedded_components {\n"
   "  id: \"collider\"\n"
   "  type: \"collisionobject\"\n"
@@ -51,6 +55,12 @@ embedded_instances {
   "restitution: 0.5\\n"
   "group: \\\"default\\\"\\n"
   "mask: \\\"player\\\"\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"bgm\"\n"
+  "  type: \"sound\"\n"
+  "  data: \"sound: \\\"/assets/sound/Groove Grove.wav\\\"\\n"
   "\"\n"
   "}\n"
   ""

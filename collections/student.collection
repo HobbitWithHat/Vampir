@@ -20,8 +20,8 @@ instances {
   id: "transition"
   prototype: "/things/transition/transition.go"
   position {
-    x: -48.464314
-    y: 36.301376
+    x: -80.46432
+    y: 49.301376
     z: 0.1
   }
 }
