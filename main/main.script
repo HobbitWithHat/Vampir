@@ -1,7 +1,6 @@
 local function start(self)
 	self.current = collectionfactory.create("/game#cafe", vmath.vector3(0, 0, 0))
 	self.menu = nil
-	print(self.current["/map"])
 	msg.post("/hud#hud", "hide_text")
 	msg.post("/hud#hud", "hide_hint")
 	msg.post("/hud#hud", "fade", {out = false})
@@ -38,7 +37,16 @@ function on_message(self, message_id, message, sender)
 
 	elseif message_id == hash("transition") then
 		msg.post("/menu#menu", "transition")
-		sound.play("/game#fly")
+		msg.post(msg.url(nil, self.current[hash("/map")], "level"), "fadeout")
+
+		-- start timer (1s, until animation end)
+		-- Call a simple function to post messages, after timer is done
+		timer.delay(1, false, function() 
+			msg.post("/vampire", "disable")
+			msg.post("/game#main", "unload") 
+		end)
+		
+
 
 	elseif message_id == hash("switch")then
 		msg.post("/hud#hud", "fade", { out = true })

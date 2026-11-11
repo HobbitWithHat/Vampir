@@ -10,4 +10,7 @@ images {
 images {
   image: "/assets/images/frame.png"
 }
+images {
+  image: "/assets/images/bat.png"
+}
 extrude_borders: 2

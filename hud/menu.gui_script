@@ -1,11 +1,13 @@
 local function close(self)
+	msg.post(".", "release_input_focus")
 	msg.post("/vampire", "enable")
+	sound.play("/game#fly")
 	gui.animate(self.background, "position.x", -640, gui.EASING_OUTSINE, 1)
 	gui.animate(self.background, gui.PROP_COLOR, vmath.vector4(1, 1, 1, 0), gui.EASING_LINEAR, 1)
 end
 
 function init(self)
-	msg.post(".", "acquire_input_focus")
+
 	self.background = gui.get_node("background")
 	self.cafe = gui.get_node("cafe_button")
 	self.cellar = gui.get_node("cellar_button")
@@ -14,19 +16,18 @@ function init(self)
 	self.student = gui.get_node("student_button")
 	self.janitor = gui.get_node("janitor_button")
 	self.roof = gui.get_node("roof_button")
+
+	gui.set_color(self.background, vmath.vector4(1, 1, 1, 0))
 end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("transition") then
+		sound.play("/game#fly")
 		gui.animate(self.background, "position.x", 640, gui.EASING_OUTSINE, 1)
 		gui.animate(self.background, gui.PROP_COLOR, vmath.vector4(1, 1, 1, 1), gui.EASING_LINEAR, 0.5)
-		
-		-- start timer (1s, until animation end)
-		-- Call a simple function to post messages, after timer is done
-		timer.delay(1.5, false, function() 
-			msg.post("/vampire", "disable")
-			msg.post("/game#main", "unload") 
-								end)
+		timer.delay(1, false, function()
+			msg.post(".", "acquire_input_focus")
+		end)
 	end
 end
 

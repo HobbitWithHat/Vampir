@@ -1,0 +1,20 @@
+name: "museum"
+scale_along_z: 0
+embedded_instances {
+  id: "map"
+  data: "components {\n"
+  "  id: \"museum\"\n"
+  "  component: \"/maps/museum.tilemap\"\n"
+  "}\n"
+  "components {\n"
+  "  id: \"level\"\n"
+  "  component: \"/main/level.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"bgm\"\n"
+  "  type: \"sound\"\n"
+  "  data: \"sound: \\\"\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+}
