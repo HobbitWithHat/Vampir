@@ -2,12 +2,6 @@ images {
   image: "/assets/images/menu.png"
 }
 images {
-  image: "/assets/images/logo.png"
-}
-images {
-  image: "/builtins/graphics/particle_blob.png"
-}
-images {
   image: "/assets/images/frame.png"
 }
 images {

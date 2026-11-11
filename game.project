@@ -1,5 +1,6 @@
 [project]
 title = Vampir
+developer = Farland Travelers
 
 [bootstrap]
 main_collection = /main/main.collectionc
