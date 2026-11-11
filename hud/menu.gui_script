@@ -17,7 +17,7 @@ function init(self)
 	self.janitor = gui.get_node("janitor_button")
 	self.roof = gui.get_node("roof_button")
 
-	gui.set_color(self.background, vmath.vector4(1, 1, 1, 0))
+	gui.set_alpha(self.background, 0)
 end
 
 function on_message(self, message_id, message, sender)
