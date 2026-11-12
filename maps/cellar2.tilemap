@@ -869,7 +869,7 @@ layers {
 }
 layers {
   id: "deco2"
-  z: 0.3
+  z: 0.4
   cell {
     x: 9
     y: -2
@@ -879,6 +879,11 @@ layers {
     x: 9
     y: -1
     tile: 2893
+  }
+  cell {
+    x: 2
+    y: 0
+    tile: 621
   }
   cell {
     x: 7
@@ -911,6 +916,11 @@ layers {
     tile: 2797
   }
   cell {
+    x: 4
+    y: 2
+    tile: 422
+  }
+  cell {
     x: 5
     y: 2
     tile: 2038
@@ -921,11 +931,6 @@ layers {
     tile: 2039
   }
   cell {
-    x: 9
-    y: 2
-    tile: 2749
-  }
-  cell {
     x: 5
     y: 3
     tile: 1990
@@ -934,6 +939,25 @@ layers {
     x: 6
     y: 3
     tile: 1991
+  }
+  cell {
+    x: 5
+    y: 5
+    tile: 621
+  }
+  cell {
+    x: 6
+    y: 5
+    tile: 621
+  }
+}
+layers {
+  id: "deco3"
+  z: 0.6
+  cell {
+    x: 9
+    y: 2
+    tile: 2749
   }
 }
 layers {

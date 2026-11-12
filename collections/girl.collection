@@ -13,7 +13,7 @@ instances {
   position {
     x: 205.14938
     y: 43.57314
-    z: 0.1
+    z: 0.2
   }
   component_properties {
     id: "npc"

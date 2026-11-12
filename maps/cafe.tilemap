@@ -916,6 +916,46 @@ layers {
     y: 5
     tile: 2885
   }
+  cell {
+    x: 8
+    y: 5
+    tile: 925
+  }
+  cell {
+    x: 9
+    y: 5
+    tile: 926
+  }
+  cell {
+    x: 10
+    y: 5
+    tile: 925
+  }
+  cell {
+    x: 11
+    y: 5
+    tile: 926
+  }
+  cell {
+    x: 8
+    y: 6
+    tile: 877
+  }
+  cell {
+    x: 9
+    y: 6
+    tile: 878
+  }
+  cell {
+    x: 10
+    y: 6
+    tile: 877
+  }
+  cell {
+    x: 11
+    y: 6
+    tile: 878
+  }
 }
 layers {
   id: "counter"
@@ -1014,6 +1054,46 @@ layers {
     x: 4
     y: 3
     tile: 1652
+  }
+  cell {
+    x: 8
+    y: 5
+    tile: 802
+  }
+  cell {
+    x: 9
+    y: 5
+    tile: 803
+  }
+  cell {
+    x: 10
+    y: 5
+    tile: 802
+  }
+  cell {
+    x: 11
+    y: 5
+    tile: 803
+  }
+  cell {
+    x: 8
+    y: 6
+    tile: 754
+  }
+  cell {
+    x: 9
+    y: 6
+    tile: 755
+  }
+  cell {
+    x: 10
+    y: 6
+    tile: 754
+  }
+  cell {
+    x: 11
+    y: 6
+    tile: 755
   }
 }
 layers {
@@ -1173,26 +1253,6 @@ layers {
     tile: 325
   }
   cell {
-    x: 8
-    y: 5
-    tile: 925
-  }
-  cell {
-    x: 9
-    y: 5
-    tile: 926
-  }
-  cell {
-    x: 10
-    y: 5
-    tile: 925
-  }
-  cell {
-    x: 11
-    y: 5
-    tile: 926
-  }
-  cell {
     x: -4
     y: 5
     tile: 819
@@ -1206,26 +1266,6 @@ layers {
     x: -1
     y: 5
     tile: 515
-  }
-  cell {
-    x: 8
-    y: 6
-    tile: 877
-  }
-  cell {
-    x: 9
-    y: 6
-    tile: 878
-  }
-  cell {
-    x: 10
-    y: 6
-    tile: 877
-  }
-  cell {
-    x: 11
-    y: 6
-    tile: 878
   }
   cell {
     x: -2
@@ -1412,26 +1452,6 @@ layers {
     tile: 726
   }
   cell {
-    x: 8
-    y: 5
-    tile: 802
-  }
-  cell {
-    x: 9
-    y: 5
-    tile: 803
-  }
-  cell {
-    x: 10
-    y: 5
-    tile: 802
-  }
-  cell {
-    x: 11
-    y: 5
-    tile: 803
-  }
-  cell {
     x: 12
     y: 5
     tile: 728
@@ -1440,26 +1460,6 @@ layers {
     x: -5
     y: 5
     tile: 726
-  }
-  cell {
-    x: 8
-    y: 6
-    tile: 754
-  }
-  cell {
-    x: 9
-    y: 6
-    tile: 755
-  }
-  cell {
-    x: 10
-    y: 6
-    tile: 754
-  }
-  cell {
-    x: 11
-    y: 6
-    tile: 755
   }
   cell {
     x: 12

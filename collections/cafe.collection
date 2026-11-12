@@ -4,8 +4,8 @@ instances {
   prototype: "/things/npc/npc.go"
   position {
     x: 151.02565
-    y: -33.52625
-    z: 0.1
+    y: -36.52625
+    z: 0.4
   }
 }
 instances {
@@ -33,6 +33,51 @@ instances {
     x: -57.58231
     y: 38.43963
     z: 0.3
+  }
+}
+instances {
+  id: "npc"
+  prototype: "/things/npc/npc.go"
+  position {
+    x: 151.90358
+    y: 38.339825
+    z: 0.4
+  }
+}
+instances {
+  id: "npc1"
+  prototype: "/things/npc/npc.go"
+  position {
+    x: 184.90358
+    y: 38.339825
+    z: 0.4
+  }
+}
+instances {
+  id: "npc2"
+  prototype: "/things/npc/npc.go"
+  position {
+    x: 151.90358
+    y: 60.339825
+    z: 0.3
+  }
+}
+instances {
+  id: "npc3"
+  prototype: "/things/npc/npc.go"
+  position {
+    x: 21.903585
+    y: -17.660177
+    z: 0.3
+  }
+}
+instances {
+  id: "npc4"
+  prototype: "/things/npc/npc.go"
+  position {
+    x: -8.096415
+    y: -37.660175
+    z: 0.4
   }
 }
 scale_along_z: 0

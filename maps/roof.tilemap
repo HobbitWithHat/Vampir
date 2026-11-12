@@ -3835,7 +3835,7 @@ layers {
   cell {
     x: 10
     y: 3
-    tile: 827
+    tile: 1150
   }
   cell {
     x: 11
@@ -8783,7 +8783,7 @@ layers {
 }
 layers {
   id: "garden"
-  z: 0.0
+  z: 0.05
   cell {
     x: 1
     y: 0
@@ -9487,7 +9487,7 @@ layers {
 }
 layers {
   id: "plants"
-  z: 0.0
+  z: 0.4
   cell {
     x: 6
     y: 1
@@ -9614,26 +9614,6 @@ layers {
     tile: 1845
   }
   cell {
-    x: 11
-    y: 8
-    tile: 1772
-  }
-  cell {
-    x: 12
-    y: 8
-    tile: 1773
-  }
-  cell {
-    x: 13
-    y: 8
-    tile: 1774
-  }
-  cell {
-    x: 14
-    y: 8
-    tile: 1775
-  }
-  cell {
     x: 4
     y: 9
     tile: 1807
@@ -9652,6 +9632,30 @@ layers {
     x: 7
     y: 9
     tile: 1810
+  }
+}
+layers {
+  id: "plants2"
+  z: 1.0
+  cell {
+    x: 11
+    y: 8
+    tile: 1772
+  }
+  cell {
+    x: 12
+    y: 8
+    tile: 1773
+  }
+  cell {
+    x: 13
+    y: 8
+    tile: 1774
+  }
+  cell {
+    x: 14
+    y: 8
+    tile: 1775
   }
   cell {
     x: 11
