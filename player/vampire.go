@@ -36,7 +36,7 @@ embedded_components {
   "    id: \"body\"\n"
   "  }\n"
   "  data: 7.0\n"
-  "  data: 7.0\n"
+  "  data: 6.0\n"
   "  data: 8.0\n"
   "}\n"
   ""

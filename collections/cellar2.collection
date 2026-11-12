@@ -19,9 +19,9 @@ instances {
   id: "npc"
   prototype: "/things/npc/npc.go"
   position {
-    x: 99.14483
-    y: 38.953506
-    z: 0.1
+    x: 183.14484
+    y: 39.953506
+    z: 0.4
   }
   component_properties {
     id: "npc"
