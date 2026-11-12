@@ -1,9 +1,20 @@
+go.property("dark", false)
+
 function init(self)
 	sound.play("#bgm")
+	if self.dark then
+		msg.post("/hud#hud", "dark", { dark = true })
+		print("send darkness")
+	end
 end
 
 function final(self)
 	sound.stop("#bgm")
+	if self.dark then
+		msg.post("/hud#hud", "dark", { dark = false })
+		print("send light")
+	end
+
 end
 
 function on_message(self, message_id, message, sender)

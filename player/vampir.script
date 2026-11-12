@@ -1,28 +1,3 @@
-
-local function blood(self, value)
-	if value >= 90 then
-		return "10"
-	elseif value >= 80 then
-		return "9"
-	elseif value >= 70 then
-		return "8"
-	elseif value >= 60 then
-		return "7"
-	elseif value >= 50 then
-		return "6"
-	elseif value >= 40 then
-		return "5"
-	elseif value >= 30 then
-		return "4"
-	elseif value >= 20 then
-		return "3"
-	elseif value >= 10 then
-		return "2"
-	elseif value >= 0 then
-		return "1"
-	end
-end
-
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	self.blood = 100
@@ -43,14 +18,14 @@ function init(self)
 
 	-- sammelbare Items und Stats
 	self.stuff = {
-		info = true,
+		info = false,
 		coffee = false,
 		cologne = false,
-		key = false,
+		key = true,
 		book = false,
 		juice = false,
 		doll = false,
-		tantrum = true,
+		tantrum = false,
 		coin = false,
 	}
 

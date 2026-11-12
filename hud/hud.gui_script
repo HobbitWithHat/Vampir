@@ -6,6 +6,8 @@ function init(self)
 	self.speaker = gui.get_node("speaker_text")
 	self.hint = gui.get_node("hint")
 	self.hinttext = gui.get_node("hint_text")
+	self.dark = gui.get_node("dark")
+
 
 	gui.set_visible(self.background, false)
 	gui.set_visible(self.border, false)
@@ -44,6 +46,15 @@ function on_message(self, message_id, message, sender)
 			gui.animate(self.fog, gui.PROP_COLOR, vmath.vector4(0,0,0,1), gui.EASING_LINEAR, 0.5)
 		else
 			gui.animate(self.fog, gui.PROP_COLOR, vmath.vector4(0,0,0,0), gui.EASING_LINEAR, 0.5)
+		end
+
+	elseif message_id == hash("dark") then
+		if message.dark then
+			gui.set_alpha(self.dark, 0.5)
+			print("recieve darkness")
+		else
+			gui.set_alpha(self.dark, 0)
+			print("recieve light")
 		end
 	end
 end
