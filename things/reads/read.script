@@ -1,0 +1,34 @@
+go.property("exhibit", hash(""))
+local piece = require("things.reads.exhibits")
+
+function init(self)
+	self.int = 1
+	self.show = false
+end
+
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("interact") then
+		
+		if piece[self.exhibit]["text"][self.int] then	-- if dialog hasn't ended, continue dialog
+			if piece[self.exhibit]["pic"] then
+				if self.show == false then
+					self.show = true
+					msg.post("/hud#hud", "show_exhibit", { pic = piece[self.exhibit]["pic"]})
+				end
+			end
+			
+			msg.post("/hud#hud", "show_text", {text = piece[self.exhibit]["text"][self.int], speaker = piece[self.exhibit]["name"]})
+			self.int = self.int+1
+
+
+		else	-- if dialog has ended, reset dialog and trigger end actions
+			if self.show then
+				self.show = false
+				msg.post("/hud#hud", "hide_exhibit")
+			end
+			msg.post("/hud#hud", "hide_text")
+			self.int = 1
+		end
+	end
+end

@@ -1,0 +1,10 @@
+images {
+  image: "/assets/characters/npcs.png"
+}
+images {
+  image: "/assets/characters/vampir.png"
+}
+images {
+  image: "/builtins/assets/images/logo/logo_256.png"
+}
+extrude_borders: 2

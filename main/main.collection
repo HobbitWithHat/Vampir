@@ -74,6 +74,12 @@ embedded_instances {
   "  data: \"sound: \\\"/assets/sound/bat wing 2.wav\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"museum\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/collections/museum.collection\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {

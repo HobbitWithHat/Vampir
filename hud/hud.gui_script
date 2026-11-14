@@ -9,6 +9,7 @@ function init(self)
 	self.notice = gui.get_node("notice")
 	self.noticetext = gui.get_node("notice_text")
 	self.dark = gui.get_node("dark")
+	self.exhibit = gui.get_node("exhibit")
 
 
 	gui.set_visible(self.background, false)
@@ -67,7 +68,18 @@ function on_message(self, message_id, message, sender)
 			gui.set_alpha(self.dark, 0.5)
 		else
 			gui.set_alpha(self.dark, 0)
-			print("recieve light")
 		end
+
+	elseif message_id == hash("show_exhibit") then
+		gui.set_texture(self.exhibit, "exhibits/" .. message.pic)
+		gui.animate(self.dark, gui.PROP_COLOR, vmath.vector4(0,0,0,0.5), gui.EASING_LINEAR, 0.5)
+		gui.animate(self.exhibit, gui.PROP_COLOR, vmath.vector4(0,0,0,1), gui.EASING_LINEAR, 0.5)
+		gui.animate(self.exhibit, gui.PROP_POSITION, vmath.vector3(640,360,0.2), gui.EASING_LINEAR, 0.5)
+
+	elseif message_id == hash("hide_exhibit") then
+		gui.animate(self.dark, gui.PROP_COLOR, vmath.vector4(0,0,0,0), gui.EASING_LINEAR, 0.5)
+		gui.animate(self.exhibit, gui.PROP_COLOR, vmath.vector4(0,0,0,0), gui.EASING_LINEAR, 0.5)
+		gui.animate(self.exhibit, gui.PROP_POSITION, vmath.vector3(640,300,0.2), gui.EASING_LINEAR, 0.5)
+		
 	end
 end
