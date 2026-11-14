@@ -1,6 +1,6 @@
 name: "museum"
 instances {
-  id: "readable"
+  id: "engine"
   prototype: "/things/reads/readable.go"
   position {
     x: 140.07117
@@ -11,6 +11,70 @@ instances {
     properties {
       id: "exhibit"
       value: "defold"
+      type: PROPERTY_TYPE_HASH
+    }
+  }
+}
+instances {
+  id: "transition"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 123.66413
+    y: -1.982654
+  }
+}
+instances {
+  id: "transition1"
+  prototype: "/things/transition/transition.go"
+  position {
+    x: 146.66412
+    y: -1.982654
+  }
+}
+instances {
+  id: "spritesheet"
+  prototype: "/things/reads/readable.go"
+  position {
+    x: 55.071167
+    y: 217.79536
+  }
+  component_properties {
+    id: "read"
+    properties {
+      id: "exhibit"
+      value: "spritesheet"
+      type: PROPERTY_TYPE_HASH
+    }
+  }
+}
+instances {
+  id: "npcs"
+  prototype: "/things/reads/readable.go"
+  position {
+    x: 87.07117
+    y: 217.79536
+  }
+  component_properties {
+    id: "read"
+    properties {
+      id: "exhibit"
+      value: "npcs"
+      type: PROPERTY_TYPE_HASH
+    }
+  }
+}
+instances {
+  id: "setting"
+  prototype: "/things/reads/readable.go"
+  position {
+    x: 3.071168
+    y: 118.795364
+  }
+  component_properties {
+    id: "read"
+    properties {
+      id: "exhibit"
+      value: "setting"
       type: PROPERTY_TYPE_HASH
     }
   }
@@ -45,6 +109,18 @@ embedded_instances {
   "    x: 0.1\n"
   "    y: 0.1\n"
   "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"collider\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"/maps/museum.tilemap\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"default\\\"\\n"
+  "mask: \\\"player\\\"\\n"
+  "\"\n"
   "}\n"
   ""
 }

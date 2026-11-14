@@ -25,7 +25,7 @@ function init(self)
 		book = false,
 		juice = false,
 		doll = false,
-		tantrum = true,
+		tantrum = false,
 		coin = false,
 	}
 

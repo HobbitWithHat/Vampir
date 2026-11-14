@@ -14,7 +14,7 @@ function on_message(self, message_id, message, sender)
 			if piece[self.exhibit]["pic"] then
 				if self.show == false then
 					self.show = true
-					msg.post("/hud#hud", "show_exhibit", { pic = piece[self.exhibit]["pic"]})
+					msg.post("/hud#hud", "show_exhibit", { pic = piece[self.exhibit]["pic"], scale = piece[self.exhibit]["scale"]})
 				end
 			end
 			

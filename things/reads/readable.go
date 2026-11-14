@@ -3,17 +3,6 @@ components {
   component: "/things/reads/read.script"
 }
 embedded_components {
-  id: "sprite"
-  type: "sprite"
-  data: "default_animation: \"nest\"\n"
-  "material: \"/builtins/materials/sprite.material\"\n"
-  "textures {\n"
-  "  sampler: \"texture_sampler\"\n"
-  "  texture: \"/graphics/sprites.atlas\"\n"
-  "}\n"
-  ""
-}
-embedded_components {
   id: "collider"
   type: "collisionobject"
   data: "type: COLLISION_OBJECT_TYPE_STATIC\n"
