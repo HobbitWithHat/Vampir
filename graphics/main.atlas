@@ -2,9 +2,12 @@ images {
   image: "/assets/images/menu.png"
 }
 images {
-  image: "/assets/images/frame.png"
+  image: "/assets/images/bat.png"
 }
 images {
-  image: "/assets/images/bat.png"
+  image: "/assets/images/textframe.png"
+}
+images {
+  image: "/assets/images/frame2.png"
 }
 extrude_borders: 2

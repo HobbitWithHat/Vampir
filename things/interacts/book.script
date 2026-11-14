@@ -8,12 +8,12 @@ end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("interact") then
 		if self.text then
+			msg.post(sender, "collect", {item = "book"})
 			msg.post("/hud#hud", "hide_text")
 			self.text = false
 			go.delete(".")
 		else
 			msg.post("/hud#hud", "show_text", {speaker = "Vampir", text = "A tome of magic. The student version."})
-			msg.post(sender, "collect", {item = "book"})
 			self.text = true
 		end
 

@@ -1,18 +1,22 @@
 function init(self)
 	self.background = gui.get_node("textbox_background")
-	self.border = gui.get_node("textbox_border")
+	--self.border = gui.get_node("textbox_border")
 	self.text = gui.get_node("textbox_text")
 	self.fog = gui.get_node("fog")
 	self.speaker = gui.get_node("speaker_text")
 	self.hint = gui.get_node("hint")
 	self.hinttext = gui.get_node("hint_text")
+	self.notice = gui.get_node("notice")
+	self.noticetext = gui.get_node("notice_text")
 	self.dark = gui.get_node("dark")
 
 
 	gui.set_visible(self.background, false)
-	gui.set_visible(self.border, false)
+	--gui.set_visible(self.border, false)
 	gui.set_visible(self.text, false)
 	gui.set_visible(self.speaker, false)
+	gui.set_visible(self.notice, false)
+	gui.set_visible(self.noticetext, false)
 	gui.set_alpha(self.fog, 1)
 end
 
@@ -23,13 +27,13 @@ function on_message(self, message_id, message, sender)
 		gui.set_text(self.text, message.text)
 		gui.set_text(self.speaker, message.speaker)
 		gui.set_visible(self.background, true)
-		gui.set_visible(self.border, true)
+		--gui.set_visible(self.border, true)
 		gui.set_visible(self.text, true)
 		gui.set_visible(self.speaker, true)
 
 	elseif message_id == hash("hide_text") then
 		gui.set_visible(self.background, false)
-		gui.set_visible(self.border, false)
+		--gui.set_visible(self.border, false)
 		gui.set_visible(self.text, false)
 		gui.set_visible(self.speaker, false)
 
@@ -40,6 +44,16 @@ function on_message(self, message_id, message, sender)
 	elseif message_id == hash("hide_hint") then
 		gui.set_visible(self.hint, false)
 		gui.set_visible(self.hinttext, false)
+
+	elseif message_id == hash("notice") then
+		local text = message.name .. " collected"
+		gui.set_text(self.noticetext, text)
+		gui.set_visible(self.notice, true)
+		gui.set_visible(self.noticetext, true)
+		timer.delay(2, false, function()
+			gui.set_visible(self.notice, false)
+			gui.set_visible(self.noticetext, false)
+		end)
 
 	elseif message_id == hash("fade") then
 		if message.out then

@@ -12,7 +12,7 @@ instances {
   prototype: "/things/npc/npc.go"
   position {
     x: 205.14938
-    y: 43.57314
+    y: 53.57314
     z: 0.2
   }
   component_properties {

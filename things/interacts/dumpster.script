@@ -38,10 +38,10 @@ function on_message(self, message_id, message, sender)
 		else
 			if self.text then
 				msg.post("/hud#hud", "hide_text")
+				msg.post(sender, "collect", {item = "doll"})
 				self.text = false
 			else
 				msg.post("/hud#hud", "show_text", {speaker = "Vampir", text = ("Someone threw away a little doll. How sad, I should rescue it.")})
-				msg.post(sender, "collect", {item = "doll"})
 				self.text = true
 			end
 		end

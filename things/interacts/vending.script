@@ -13,10 +13,10 @@ function on_message(self, message_id, message, sender)
 		if message.stuff["coin"] then
 			if self.text then
 				msg.post("/hud#hud", "hide_text")
+				msg.post(sender, "collect", {item = "tantrum"})
 				self.text = false
 			else
 				msg.post("/hud#hud", "show_text", {speaker = "Vampir", text = "Yeah, Tantrum! I thought this stuff was illegal."})
-				msg.post(sender, "collect", {item = "tantrum"})
 				self.text = true
 			end
 

@@ -21,11 +21,11 @@ function init(self)
 		info = false,
 		coffee = false,
 		cologne = false,
-		key = true,
+		key = false,
 		book = false,
 		juice = false,
 		doll = false,
-		tantrum = false,
+		tantrum = true,
 		coin = false,
 	}
 
@@ -116,6 +116,7 @@ function on_message(self, message_id, message, sender)
 
 	elseif message_id == hash("collect") then
 		self.stuff[message.item] = true
+		msg.post("/hud#hud", "notice", { name = message.item })
 
 	elseif message_id == hash("clear_object") then
 		self.object = nil
